@@ -3,13 +3,15 @@
         .row {
             .row {
                 .authBannerWrap {
-                    .banner {
-                    }
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .banner {}
                 }
 
                 .authFormWrap {
-                    .logo {
-                    }
+                    .logo {}
 
                     .logInTitle {
                         font-family: $fontBebasNeue;
@@ -20,6 +22,7 @@
                         color: $colorPrimary;
                         font-weight: 600;
                         transition: $transition;
+
                         &:hover {
                             color: $colorBlack;
                         }
@@ -29,11 +32,6 @@
 
             .authFooter {
                 color: $colorPrimary;
-                .nav-link {
-                }
-
-                .copyright {
-                }
             }
         }
     }

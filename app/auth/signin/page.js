@@ -7,12 +7,12 @@ import Button from '../../../components/Input/Button';
 
 const SignIn = () => {
     return (
-        <div className="auth">
+        <div className="auth py-4 py-md-0">
             <div className="container vh-100">
                 <div className="row vh-100 justify-content-center">
                     <div className="col-12 col-md-9 d-flex align-items-center">
                         <div className="row g-4 g-md-5 row-cols-1 row-cols-md-2 flex-md-row-reverse">
-                            <div className="col">
+                            <div className="col d-flex align-items-center">
                                 <div className="authBannerWrap">
                                     <Image className="banner img-fluid" src={imgAuthBanner} alt="Auth Banner Image" />
                                 </div>
@@ -28,7 +28,7 @@ const SignIn = () => {
                                         <Input type="password" name="password" id="password" placeholder="Password" />
                                         <Button type="button" text="Login to Your Account" id="logIn" />
                                     </form>
-                                    <Link className="nav-link" href="/auth/signup">
+                                    <Link className="nav-link mb-2" href="/auth/signup">
                                         or Sign up today !
                                     </Link>
                                 </div>
