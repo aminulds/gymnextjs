@@ -1,0 +1,22 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+// Variables
+@import './variables.scss';
+
+html {
+    body {
+        * {
+            transition: $transition;
+            font-size: 16px;
+        }
+        // ----------- Components ------------ //
+        // Input
+        @import '../components/Input/input.scss';
+        @import '../components/Input/button.scss';
+
+        // ----------- Pages ------------ //
+        // Auth
+        @import '../app/auth/auth.scss';
+    }
+}

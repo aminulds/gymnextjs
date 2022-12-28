@@ -1,0 +1,40 @@
+.auth {
+    .container {
+        .row {
+            .row {
+                .authBannerWrap {
+                    .banner {
+                    }
+                }
+
+                .authFormWrap {
+                    .logo {
+                    }
+
+                    .logInTitle {
+                        font-family: $fontBebasNeue;
+                        font-size: 2rem;
+                    }
+
+                    .nav-link {
+                        color: $colorPrimary;
+                        font-weight: 600;
+                        transition: $transition;
+                        &:hover {
+                            color: $colorBlack;
+                        }
+                    }
+                }
+            }
+
+            .authFooter {
+                color: $colorPrimary;
+                .nav-link {
+                }
+
+                .copyright {
+                }
+            }
+        }
+    }
+}

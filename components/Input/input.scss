@@ -1,0 +1,16 @@
+.form-control {
+    height: 3rem;
+    background-color: $colorBlack;
+    color: $colorWhite;
+    transition: $transition;
+    border-radius: $radius_1;
+
+    &:focus {
+        box-shadow: none;
+        border-color: $colorPrimary;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+}
