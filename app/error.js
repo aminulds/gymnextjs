@@ -10,8 +10,10 @@ export default function Error({ error, reset }) {
 
     return (
         <div className="col-12 col-md-9 col-lg-10">
-            <p>Something went wrong!</p>
-            <button onClick={() => reset()}>Reset error boundary</button>
+            <div className="d-flex align-items-center justify-content-center">
+                <p className="text-danger">Something went wrong!</p>
+                <button onClick={() => reset()}>Reset error boundary</button>
+            </div>
         </div>
     );
 }

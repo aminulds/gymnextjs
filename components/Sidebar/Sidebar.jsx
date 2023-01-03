@@ -5,10 +5,12 @@ import { AiOutlineDoubleLeft } from 'react-icons/ai';
 import Input from '../Input/Input';
 import { sideBarNavData } from './sidebarData';
 import userImage from '/public/images/users/user-profile.png';
+import { usePathname } from 'next/navigation';
 
 const Sidebar = () => {
     const [userLogIn, setuserLogIn] = useState(true);
     const [activeNav, setactiveNav] = useState(null);
+    const router = usePathname();
 
     return (
         <div className="col-12 col-md-3 col-lg-2">
@@ -27,7 +29,7 @@ const Sidebar = () => {
                                 <ul key={item.navItems} className="navbar-nav justify-content-end flex-grow-1 pe-3 mt-3 mt-md-4 border-end">
                                     <h5 className="navTitle">{item.navType}</h5>
                                     {item.navItems.map((navItem) => (
-                                        <li key={navItem.title} className={navItem.subNav ? 'nav-item dropdown' : 'nav-item'}>
+                                        <li key={navItem.title} className={navItem.subNav ? 'nav-item dropdown' : 'nav-item'} data-bs-dismiss="offcanvas" aria-label="Close">
                                             <Link onClick={() => setactiveNav(navItem)} className={`nav-link ${activeNav == navItem && 'active'}`} href={navItem.path} role={navItem.subNav ? 'button' : ''} data-bs-toggle={navItem.subNav ? 'dropdown' : ''} aria-expanded={navItem.subNav ? 'false' : ''}>
                                                 <span className="me-2 me-md-3">{navItem.icon}</span>
                                                 {navItem.title}

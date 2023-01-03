@@ -6,6 +6,7 @@ import imgLogo from '/public/images/logo/logo.png';
 import { MdSpaceDashboard } from 'react-icons/md';
 import { BsFillBellFill } from 'react-icons/bs';
 import Notification from './Notification';
+import Link from 'next/link';
 
 const icons = [<MdSpaceDashboard />, <BsFillBellFill />];
 
@@ -14,7 +15,9 @@ const TopBar = ({ pageIcon, labelTitle }) => {
         <div className="topBar">
             <div className="topBarLogo">
                 <NavToogler />
-                <Image className="logo img-fluid w-75" src={imgLogo} alt="Logo" />
+                <Link href="/">
+                    <Image className="logo img-fluid w-75" src={imgLogo} alt="Logo" />
+                </Link>
                 <PageLabel pageIcon={pageIcon} labelTitle={labelTitle} />
             </div>
 

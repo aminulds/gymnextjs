@@ -2,8 +2,8 @@
 import { MdSpaceDashboard, MdForum, MdWaterDrop, MdFitnessCenter, MdChecklistRtl, MdExpandMore, MdSettings } from 'react-icons/md';
 import { IoMdNutrition } from 'react-icons/io';
 import { usePathname } from 'next/navigation';
-
 import { useEffect, useState } from 'react';
+
 // Bootstrap css
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import 'bootstrap/dist/js/bootstrap';
@@ -49,7 +49,6 @@ export default function RootLayout({ children }) {
                     <div className="row pt-3">
                         {/* Sidebar */}
                         <Sidebar />
-
                         {/* Main Content */}
                         {children}
                     </div>
