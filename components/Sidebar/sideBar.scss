@@ -1,0 +1,48 @@
+.sideBar {
+    .offcanvas {
+        .offcanvas-body {
+            flex-grow: 0;
+            .navbar-nav {
+                .navTitle {
+                    font-size: 1.25rem;
+                    font-family: $fontBebasNeue;
+                }
+
+                flex-direction: column;
+                .nav-item {
+                    .nav-link {
+                        color: $colorBlack;
+                        transition: $transition_2;
+                        &:hover {
+                            background: $colorBgGray;
+                            color: $colorPrimary;
+                        }
+                    }
+
+                    .active {
+                        font-weight: 700;
+                        background: $colorBgGray;
+                        color: $colorPrimary;
+                    }
+                }
+            }
+
+            .user {
+                text-decoration: none;
+                font-weight: 600;
+                color: $colorPrimary;
+                transition: $transition_2;
+
+                .userImage {
+                    height: 4rem;
+                    width: 4rem;
+                    border-radius: $radius_circle;
+                }
+
+                &:hover {
+                    color: $colorBlack;
+                }
+            }
+        }
+    }
+}
