@@ -1,0 +1,81 @@
+import { MdSpaceDashboard, MdForum, MdWaterDrop, MdFitnessCenter, MdChecklistRtl, MdExpandMore, MdSettings } from 'react-icons/md';
+import { IoMdNutrition } from 'react-icons/io';
+
+export const sideBarNavData = [
+    {
+        navType: 'Explore',
+        navItems: [
+            {
+                title: 'Home',
+                path: '/',
+                icon: <MdSpaceDashboard />,
+            },
+            {
+                title: 'Discussions',
+                path: '/discussions',
+                icon: <MdForum />,
+            },
+        ],
+    },
+
+    {
+        navType: 'Categories',
+        navItems: [
+            {
+                title: 'Peds',
+                path: '/peds',
+                icon: <MdWaterDrop />,
+            },
+            {
+                title: 'Nutrition',
+                path: '/nutrition',
+                icon: <IoMdNutrition />,
+            },
+            {
+                title: 'Training',
+                path: '/training',
+                icon: <MdFitnessCenter />,
+            },
+            {
+                title: 'Progress',
+                path: '/progress',
+                icon: <MdChecklistRtl />,
+            },
+
+            {
+                title: 'See More',
+                path: '#',
+                icon: <MdExpandMore />,
+                subNav: true,
+                subNavItems: [
+                    {
+                        title: 'Peds',
+                        path: '/peds',
+                        icon: <MdWaterDrop />,
+                    },
+                    {
+                        title: 'Nutrition',
+                        path: '/nutrition',
+                        icon: <IoMdNutrition />,
+                    },
+                    {
+                        title: 'Training',
+                        path: '/training',
+                        icon: <MdFitnessCenter />,
+                    },
+                ],
+            },
+        ],
+    },
+
+    {
+        navType: 'Account',
+        navItems: [
+            {
+                title: 'Settings',
+                path: '/settings',
+                icon: <MdSettings />,
+            },
+        ],
+    },
+];

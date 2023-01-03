@@ -2,12 +2,13 @@
     height: 3rem;
     background-color: $colorBlack;
     color: $colorWhite;
-    transition: $transition;
+    transition: $transition_1;
     border-radius: $radius_1;
+    border-color: $colorPrimary;
 
     &:focus {
-        box-shadow: none;
-        border-color: $colorPrimary;
+        box-shadow: $shadow_1;
+        border-color: $colorBgGray;
     }
 
     &:not(:last-child) {

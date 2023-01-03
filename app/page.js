@@ -1,9 +1,10 @@
-
-
+'use client';
 const Home = () => {
-  return (
-    <div className="title">Home</div>
-  )
-}
+    return (
+        <div className="col-12 col-md-9 col-lg-10">
+            <h1>Home</h1>
+        </div>
+    );
+};
 
-export default Home
+export default Home;

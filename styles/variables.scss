@@ -4,13 +4,24 @@ $colorPrimaryGradient1: linear-gradient(90deg, rgba(176, 145, 90, 1) 0%, rgba(17
 $colorPrimaryGradient2: linear-gradient(90deg, rgba(179, 121, 18, 1) 0%, rgba(176, 145, 90, 1) 100%);
 $colorBlack: #0f0f0f;
 $colorWhite: #ffffff;
+$colorBgGray: #f2f2f2;
 
 // Fonts
 $fontPoppins: 'Poppins';
 $fontSanSerif: 'sans-serif';
 $fontBebasNeue: 'Bebas Neue';
 
+// Radius
 $radius_1: 0.5rem;
+$radius_circle: 50%;
+
+// Border
+$border_1: 2px solid $colorBgGray;
+$border_2: 1px solid $colorPrimary;
 
 // Transition
-$transition: all 0.4s ease;
+$transition_1: all 0.4s ease;
+$transition_2: all 0.2s ease;
+
+// Effect
+$shadow_1: 0px 0px 8px rgba(0, 0, 0, 0.15);

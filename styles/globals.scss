@@ -7,13 +7,17 @@
 html {
     body {
         * {
-            transition: $transition;
             font-size: 16px;
         }
+
         // ----------- Components ------------ //
         // Input
         @import '../components/Input/input.scss';
         @import '../components/Input/button.scss';
+        // TopBar
+        @import '../components//TopBar//topBar.scss';
+        // Sidebar
+        @import '../components//Sidebar//sideBar.scss';
 
         // ----------- Pages ------------ //
         // Auth
