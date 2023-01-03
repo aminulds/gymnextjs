@@ -9,13 +9,13 @@ import Notification from './Notification';
 
 const icons = [<MdSpaceDashboard />, <BsFillBellFill />];
 
-const TopBar = () => {
+const TopBar = ({ pageIcon, labelTitle }) => {
     return (
         <div className="topBar">
             <div className="topBarLogo">
                 <NavToogler />
-                <Image className="logo img-fluid w-75" src={imgLogo} />
-                <PageLabel iconName={icons[0]} text="Home" />
+                <Image className="logo img-fluid w-75" src={imgLogo} alt="Logo" />
+                <PageLabel pageIcon={pageIcon} labelTitle={labelTitle} />
             </div>
 
             <Notification iconName={icons[1]} notificatinCount="20" />

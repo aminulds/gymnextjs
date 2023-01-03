@@ -8,11 +8,7 @@ import userImage from '/public/images/users/user-profile.png';
 
 const Sidebar = () => {
     const [userLogIn, setuserLogIn] = useState(true);
-    const [activeNav, setactiveNav] = useState(false);
-
-    const activeNavHandler = (e) => {
-        setactiveNav(true);
-    };
+    const [activeNav, setactiveNav] = useState(null);
 
     return (
         <div className="col-12 col-md-3 col-lg-2">
@@ -28,11 +24,11 @@ const Sidebar = () => {
 
                         {sideBarNavData.map((item) => {
                             return (
-                                <ul className="navbar-nav justify-content-end flex-grow-1 pe-3 mt-3 mt-md-4 border-end">
+                                <ul key={item.navItems} className="navbar-nav justify-content-end flex-grow-1 pe-3 mt-3 mt-md-4 border-end">
                                     <h5 className="navTitle">{item.navType}</h5>
                                     {item.navItems.map((navItem) => (
-                                        <li className={`${navItem.subNav ? 'nav-item dropdown' : 'nav-item'}`}>
-                                            <Link onClick={() => activeNavHandler} className={`${activeNav ? 'nav-link active' : 'nav-link'}`} href={navItem.path} role={`${navItem.subNav ? 'button' : ''}`} data-bs-toggle={`${navItem.subNav ? 'dropdown' : ''}`} aria-expanded={`${navItem.subNav ? 'false' : ''}`}>
+                                        <li key={navItem.title} className={navItem.subNav ? 'nav-item dropdown' : 'nav-item'}>
+                                            <Link onClick={() => setactiveNav(navItem)} className={`nav-link ${activeNav == navItem && 'active'}`} href={navItem.path} role={navItem.subNav ? 'button' : ''} data-bs-toggle={navItem.subNav ? 'dropdown' : ''} aria-expanded={navItem.subNav ? 'false' : ''}>
                                                 <span className="me-2 me-md-3">{navItem.icon}</span>
                                                 {navItem.title}
                                             </Link>
@@ -41,8 +37,8 @@ const Sidebar = () => {
                                                 <ul className="dropdown-menu border-0 shadow">
                                                     {navItem.subNavItems.map((subItem) => {
                                                         return (
-                                                            <li className="nav-item">
-                                                                <Link onClick={() => activeNavHandler} className={`${activeNav ? 'nav-link dropdown-item active' : 'nav-link dropdown-item'}`} href={subItem.path}>
+                                                            <li key={subItem.title} className="nav-item">
+                                                                <Link className="nav-link dropdown-item" href={subItem.path}>
                                                                     <span className="me-2 me-md-3">{subItem.icon}</span>
                                                                     {subItem.title}
                                                                 </Link>

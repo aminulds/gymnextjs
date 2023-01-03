@@ -9,7 +9,7 @@ export default function Error({ error, reset }) {
     }, [error]);
 
     return (
-        <div>
+        <div className="col-12 col-md-9 col-lg-10">
             <p>Something went wrong!</p>
             <button onClick={() => reset()}>Reset error boundary</button>
         </div>
