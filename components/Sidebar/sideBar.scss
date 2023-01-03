@@ -2,6 +2,7 @@
     .offcanvas {
         .offcanvas-body {
             flex-grow: 0;
+
             .navbar-nav {
                 .navTitle {
                     font-size: 1.25rem;
@@ -9,10 +10,12 @@
                 }
 
                 flex-direction: column;
+
                 .nav-item {
                     .nav-link {
                         color: $colorBlack;
                         transition: $transition_2;
+
                         &:hover {
                             background: $colorBgGray;
                             color: $colorPrimary;
@@ -33,14 +36,26 @@
                 color: $colorPrimary;
                 transition: $transition_2;
 
-                .userImage {
-                    height: 4rem;
-                    width: 4rem;
-                    border-radius: $radius_circle;
+                .nav-link {
+                    transition: $transition_1;
+
+                    .userImage {
+                        height: 4rem;
+                        width: 4rem;
+                        border-radius: $radius_circle;
+                    }
+
+                    &:hover {
+                        color: $colorBlack;
+                    }
                 }
 
-                &:hover {
-                    color: $colorBlack;
+                .text-danger {
+                    color: $colorDanger !important;
+
+                    &:hover {
+                        color: $colorBlack !important;
+                    }
                 }
             }
         }

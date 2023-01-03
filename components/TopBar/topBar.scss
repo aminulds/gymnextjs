@@ -9,15 +9,18 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+
         // NavToogler
         .navbar-toggler {
             display: flex;
             align-items: center;
             margin-right: 1.5rem;
+
             svg {
                 font-size: 1.5rem;
             }
         }
+
         .logo {
             max-width: 15rem;
         }
@@ -29,7 +32,6 @@
             border: none;
             box-shadow: $shadow_1;
             align-items: center;
-            height: 3rem;
             cursor: text;
         }
     }

@@ -1,13 +1,9 @@
 'use client';
-import { MdSpaceDashboard, MdForum, MdWaterDrop, MdFitnessCenter, MdChecklistRtl, MdExpandMore, MdSettings, MdDashboard } from 'react-icons/md';
-import { IoMdNutrition } from 'react-icons/io';
-import { FaUser } from 'react-icons/fa';
-import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import { MdSpaceDashboard } from 'react-icons/md';
 
 // Bootstrap css
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import 'bootstrap/dist/js/bootstrap';
 import Sidebar from '../components/Sidebar/Sidebar';
 // Custom scss
 import '/styles/globals.scss';
@@ -15,14 +11,12 @@ import TopBar from '../components/TopBar/TopBar';
 
 export default function RootLayout({ children }) {
     const [pageIcon, setPageIcon] = useState(<MdSpaceDashboard />);
+    const [pagePath, setPagePath] = useState('/');
 
-    let router = usePathname();
-
-    const PageLabelHandler = (icon) => {
+    const PageLabelHandler = (icon, path) => {
         setPageIcon(icon);
+        setPagePath(path);
     };
-
-    //console.log(pageIcon);
 
     return (
         <html>
@@ -34,7 +28,7 @@ export default function RootLayout({ children }) {
             <body>
                 <div className="container-fluid px-md-4">
                     {/* Top Bar */}
-                    <TopBar pageIcon={pageIcon} labelTitle={`${router === '/' ? 'Home' : router.split('/')[1]}`} />
+                    <TopBar pageIcon={pageIcon} labelTitle={`${pagePath === '/' ? 'Home' : pagePath.split('/')[1]}`} />
 
                     <div className="row pt-3">
                         {/* Sidebar */}

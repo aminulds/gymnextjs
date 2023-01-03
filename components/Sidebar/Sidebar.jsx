@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { AiOutlineDoubleLeft } from 'react-icons/ai';
 import { FiLogOut } from 'react-icons/fi';
+import { FaUser } from 'react-icons/fa';
 import Input from '../Input/Input';
 import { sideBarNavData } from './sidebarData';
 import userImage from '/public/images/users/user-profile.png';
@@ -10,10 +11,11 @@ import userImage from '/public/images/users/user-profile.png';
 const Sidebar = ({ PageLabelHandler }) => {
     const [login, setLogin] = useState(true);
     const [activeNav, setactiveNav] = useState(null);
+    const userIcon = FaUser;
 
-    const ActiveNavHandler = (navItem, icon) => {
+    const ActiveNavHandler = (navItem, icon, path) => {
         setactiveNav(navItem);
-        PageLabelHandler(icon);
+        PageLabelHandler(icon, path);
     };
 
     return (
@@ -34,7 +36,7 @@ const Sidebar = ({ PageLabelHandler }) => {
                                     <h5 className="navTitle">{item.navType}</h5>
                                     {item.navItems.map((navItem) => (
                                         <li key={navItem.title} className={navItem.subNav ? 'nav-item dropdown' : 'nav-item'} data-bs-dismiss="offcanvas" aria-label="Close">
-                                            <Link onClick={() => ActiveNavHandler(navItem, navItem.icon)} className={`nav-link ${activeNav == navItem && 'active'}`} href={navItem.path} role={navItem.subNav ? 'button' : ''} data-bs-toggle={navItem.subNav ? 'dropdown' : ''} aria-expanded={navItem.subNav ? 'false' : ''}>
+                                            <Link onClick={() => ActiveNavHandler(navItem, navItem.icon, navItem.path)} className={`nav-link ${activeNav == navItem && 'active'}`} href={navItem.path} role={navItem.subNav ? 'button' : ''} data-bs-toggle={navItem.subNav ? 'dropdown' : ''} aria-expanded={navItem.subNav ? 'false' : ''}>
                                                 <span className="me-2 me-md-3">{navItem.icon}</span>
                                                 {navItem.title}
                                             </Link>
@@ -61,17 +63,17 @@ const Sidebar = ({ PageLabelHandler }) => {
 
                         {/* User Profile */}
                         {login && (
-                            <div className="user position-fixed bottom-0 mb-4 p-3">
-                                <Link onClick={() => setactiveNav(true)} href="/user" className="nav-link">
-                                    <Image className="userImage img-fluid me-3" src={userImage} alt="User Profile" />
-                                    <span>Jeslin Smith</span>
+                            <div className="user my-3 pe-3">
+                                <Link onClick={() => ActiveNavHandler('', userIcon, "/user")} href="/user" className="nav-link d-flex align-items-center">
+                                    <Image className="userImage img-fluid me-2" src={userImage} alt="User Profile" />
+                                    <span className='text-nowrap'>Jeslin Smith</span>
                                 </Link>
-                                <Link className="nav-link" href="/" onClick={() => setLogin(false)}>
-                                    <span>
+                                <button onClick={() => setLogin(false)} className="btn nav-link mt-3 text-danger" type='button' >
+                                    <span className='me-2'>
                                         <FiLogOut />
                                     </span>
                                     Logout
-                                </Link>
+                                </button>
                             </div>
                         )}
                     </div>
