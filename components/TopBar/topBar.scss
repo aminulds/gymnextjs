@@ -26,9 +26,11 @@
         .btnPrimaryOutline {
             margin-left: 2rem;
             color: $colorPrimary;
-            border: $border_2;
+            border: none;
             box-shadow: $shadow_1;
             align-items: center;
+            height: 3rem;
+            cursor: text;
         }
     }
 

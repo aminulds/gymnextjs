@@ -3,12 +3,11 @@ import React from 'react';
 import NavToogler from '../Input/NavToogler';
 import PageLabel from './PageLabel';
 import imgLogo from '/public/images/logo/logo.png';
-import { MdSpaceDashboard } from 'react-icons/md';
 import { BsFillBellFill } from 'react-icons/bs';
 import Notification from './Notification';
 import Link from 'next/link';
 
-const icons = [<MdSpaceDashboard />, <BsFillBellFill />];
+const icons = [<BsFillBellFill />];
 
 const TopBar = ({ pageIcon, labelTitle }) => {
     return (
@@ -21,7 +20,7 @@ const TopBar = ({ pageIcon, labelTitle }) => {
                 <PageLabel pageIcon={pageIcon} labelTitle={labelTitle} />
             </div>
 
-            <Notification iconName={icons[1]} notificatinCount="20" />
+            <Notification iconName={icons[0]} notificatinCount="20" />
         </div>
     );
 };

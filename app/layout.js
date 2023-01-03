@@ -1,6 +1,7 @@
 'use client';
-import { MdSpaceDashboard, MdForum, MdWaterDrop, MdFitnessCenter, MdChecklistRtl, MdExpandMore, MdSettings } from 'react-icons/md';
+import { MdSpaceDashboard, MdForum, MdWaterDrop, MdFitnessCenter, MdChecklistRtl, MdExpandMore, MdSettings, MdDashboard } from 'react-icons/md';
 import { IoMdNutrition } from 'react-icons/io';
+import { FaUser } from 'react-icons/fa';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
@@ -14,25 +15,14 @@ import TopBar from '../components/TopBar/TopBar';
 
 export default function RootLayout({ children }) {
     const [pageIcon, setPageIcon] = useState(<MdSpaceDashboard />);
-    const router = usePathname();
 
-    useEffect(() => {
-        if (router === '/') {
-            setPageIcon(<MdSpaceDashboard />);
-        } else if (router === '/discussions') {
-            setPageIcon(<MdForum />);
-        } else if (router === '/peds') {
-            setPageIcon(<MdWaterDrop />);
-        } else if (router === '/nutrition') {
-            setPageIcon(<IoMdNutrition />);
-        } else if (router === '/training') {
-            setPageIcon(<MdFitnessCenter />);
-        } else if (router === '/progress') {
-            setPageIcon(<MdChecklistRtl />);
-        } else if (router === '/settings') {
-            setPageIcon(<MdSettings />);
-        }
-    }, [router]);
+    let router = usePathname();
+
+    const PageLabelHandler = (icon) => {
+        setPageIcon(icon);
+    };
+
+    //console.log(pageIcon);
 
     return (
         <html>
@@ -48,7 +38,7 @@ export default function RootLayout({ children }) {
 
                     <div className="row pt-3">
                         {/* Sidebar */}
-                        <Sidebar />
+                        <Sidebar PageLabelHandler={PageLabelHandler} />
                         {/* Main Content */}
                         {children}
                     </div>

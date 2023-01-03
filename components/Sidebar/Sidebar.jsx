@@ -2,15 +2,19 @@ import Image from 'next/image';
 import { useState } from 'react';
 import Link from 'next/link';
 import { AiOutlineDoubleLeft } from 'react-icons/ai';
+import { FiLogOut } from 'react-icons/fi';
 import Input from '../Input/Input';
 import { sideBarNavData } from './sidebarData';
 import userImage from '/public/images/users/user-profile.png';
-import { usePathname } from 'next/navigation';
 
-const Sidebar = () => {
-    const [userLogIn, setuserLogIn] = useState(true);
+const Sidebar = ({ PageLabelHandler }) => {
+    const [login, setLogin] = useState(true);
     const [activeNav, setactiveNav] = useState(null);
-    const router = usePathname();
+
+    const ActiveNavHandler = (navItem, icon) => {
+        setactiveNav(navItem);
+        PageLabelHandler(icon);
+    };
 
     return (
         <div className="col-12 col-md-3 col-lg-2">
@@ -30,7 +34,7 @@ const Sidebar = () => {
                                     <h5 className="navTitle">{item.navType}</h5>
                                     {item.navItems.map((navItem) => (
                                         <li key={navItem.title} className={navItem.subNav ? 'nav-item dropdown' : 'nav-item'} data-bs-dismiss="offcanvas" aria-label="Close">
-                                            <Link onClick={() => setactiveNav(navItem)} className={`nav-link ${activeNav == navItem && 'active'}`} href={navItem.path} role={navItem.subNav ? 'button' : ''} data-bs-toggle={navItem.subNav ? 'dropdown' : ''} aria-expanded={navItem.subNav ? 'false' : ''}>
+                                            <Link onClick={() => ActiveNavHandler(navItem, navItem.icon)} className={`nav-link ${activeNav == navItem && 'active'}`} href={navItem.path} role={navItem.subNav ? 'button' : ''} data-bs-toggle={navItem.subNav ? 'dropdown' : ''} aria-expanded={navItem.subNav ? 'false' : ''}>
                                                 <span className="me-2 me-md-3">{navItem.icon}</span>
                                                 {navItem.title}
                                             </Link>
@@ -56,11 +60,19 @@ const Sidebar = () => {
                         })}
 
                         {/* User Profile */}
-                        {userLogIn && (
-                            <Link href="/user" className="user position-fixed bottom-0 mb-4 p-3">
-                                <Image className="userImage img-fluid me-3" src={userImage} alt="User Profile" />
-                                <span>Jeslin Smith</span>
-                            </Link>
+                        {login && (
+                            <div className="user position-fixed bottom-0 mb-4 p-3">
+                                <Link onClick={() => setactiveNav(true)} href="/user" className="nav-link">
+                                    <Image className="userImage img-fluid me-3" src={userImage} alt="User Profile" />
+                                    <span>Jeslin Smith</span>
+                                </Link>
+                                <Link className="nav-link" href="/" onClick={() => setLogin(false)}>
+                                    <span>
+                                        <FiLogOut />
+                                    </span>
+                                    Logout
+                                </Link>
+                            </div>
                         )}
                     </div>
                 </div>
