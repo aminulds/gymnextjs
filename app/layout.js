@@ -8,14 +8,14 @@ import Sidebar from '../components/Sidebar/Sidebar';
 // Custom scss
 import '/styles/globals.scss';
 import TopBar from '../components/TopBar/TopBar';
+import { usePathname } from 'next/navigation';
 
 export default function RootLayout({ children }) {
+    const router = usePathname();
     const [pageIcon, setPageIcon] = useState(<MdSpaceDashboard />);
-    const [pagePath, setPagePath] = useState('/');
 
-    const PageLabelHandler = (icon, path) => {
+    const PageLabelHandler = (icon) => {
         setPageIcon(icon);
-        setPagePath(path);
     };
 
     return (
@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
             <body>
                 <div className="container-fluid px-md-4">
                     {/* Top Bar */}
-                    <TopBar pageIcon={pageIcon} labelTitle={`${pagePath === '/' ? 'Home' : pagePath.split('/')[1]}`} />
+                    <TopBar pageIcon={pageIcon} labelTitle={`${router === '/' ? 'Home' : router.split('/')[1]}`} />
 
                     <div className="row pt-3">
                         {/* Sidebar */}

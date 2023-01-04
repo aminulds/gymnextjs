@@ -13,9 +13,9 @@ const Sidebar = ({ PageLabelHandler }) => {
     const [activeNav, setactiveNav] = useState(null);
     const userIcon = FaUser;
 
-    const ActiveNavHandler = (navItem, icon, path) => {
+    const ActiveNavHandler = (navItem, icon) => {
         setactiveNav(navItem);
-        PageLabelHandler(icon, path);
+        PageLabelHandler(icon);
     };
 
     return (
@@ -36,7 +36,7 @@ const Sidebar = ({ PageLabelHandler }) => {
                                     <h5 className="navTitle">{item.navType}</h5>
                                     {item.navItems.map((navItem) => (
                                         <li key={navItem.title} className={navItem.subNav ? 'nav-item dropdown' : 'nav-item'} data-bs-dismiss="offcanvas" aria-label="Close">
-                                            <Link onClick={() => ActiveNavHandler(navItem, navItem.icon, navItem.path)} className={`nav-link ${activeNav == navItem && 'active'}`} href={navItem.path} role={navItem.subNav ? 'button' : ''} data-bs-toggle={navItem.subNav ? 'dropdown' : ''} aria-expanded={navItem.subNav ? 'false' : ''}>
+                                            <Link onClick={() => (!navItem.subNav ? ActiveNavHandler(navItem, navItem.icon) : null)} className={`nav-link ${activeNav == navItem && 'active'}`} href={navItem.path} role={navItem.subNav ? 'button' : ''} data-bs-toggle={navItem.subNav ? 'dropdown' : ''} aria-expanded={navItem.subNav ? 'false' : ''}>
                                                 <span className="me-2 me-md-3">{navItem.icon}</span>
                                                 {navItem.title}
                                             </Link>
@@ -46,7 +46,7 @@ const Sidebar = ({ PageLabelHandler }) => {
                                                     {navItem.subNavItems.map((subItem) => {
                                                         return (
                                                             <li key={subItem.title} className="nav-item">
-                                                                <Link className="nav-link dropdown-item" href={subItem.path}>
+                                                                <Link onClick={() => ActiveNavHandler(subItem, subItem.icon)} className="nav-link dropdown-item" href={subItem.path}>
                                                                     <span className="me-2 me-md-3">{subItem.icon}</span>
                                                                     {subItem.title}
                                                                 </Link>
@@ -64,16 +64,16 @@ const Sidebar = ({ PageLabelHandler }) => {
                         {/* User Profile */}
                         {login && (
                             <div className="user my-3 pe-3">
-                                <Link onClick={() => ActiveNavHandler('', userIcon, "/user")} href="/user" className="nav-link d-flex align-items-center">
-                                    <Image className="userImage img-fluid me-2" src={userImage} alt="User Profile" />
-                                    <span className='text-nowrap'>Jeslin Smith</span>
-                                </Link>
-                                <button onClick={() => setLogin(false)} className="btn nav-link mt-3 text-danger" type='button' >
-                                    <span className='me-2'>
+                                <button onClick={() => setLogin(false)} className="btn nav-link mb-3 text-danger" type="button">
+                                    <span className="mx-2">
                                         <FiLogOut />
                                     </span>
                                     Logout
                                 </button>
+                                <Link onClick={() => ActiveNavHandler('', userIcon, '/user')} href="/user" className="nav-link d-flex align-items-center">
+                                    <Image className="userImage img-fluid me-2" src={userImage} alt="User Profile" />
+                                    <span className="text-nowrap">Jeslin Smith</span>
+                                </Link>
                             </div>
                         )}
                     </div>
