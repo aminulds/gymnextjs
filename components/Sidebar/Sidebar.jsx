@@ -64,12 +64,12 @@ const Sidebar = ({ PageLabelHandler }) => {
                         {/* User Profile */}
                         {login && (
                             <div className="user my-3 pe-3">
-                                <button onClick={() => setLogin(false)} className="btn nav-link mb-3 text-danger" type="button">
+                                <Link href="auth/signin" onClick={() => setLogin(false)} className="nav-link mb-3 text-danger">
                                     <span className="mx-2">
                                         <FiLogOut />
                                     </span>
                                     Logout
-                                </button>
+                                </Link>
                                 <Link onClick={() => ActiveNavHandler('', userIcon, '/user')} href="/user" className="nav-link d-flex align-items-center">
                                     <Image className="userImage img-fluid me-2" src={userImage} alt="User Profile" />
                                     <span className="text-nowrap">Jeslin Smith</span>
