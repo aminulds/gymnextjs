@@ -25,7 +25,7 @@ const Home = () => {
 
     return (
         <div className="col-12 col-lg-10">
-            <div className="home">
+            <div className="mainContent">
                 <div className="row mb-5">
                     <div className="col-lg-4 mb-5 mb-lg-0">
                         <div className="sectionTitle">

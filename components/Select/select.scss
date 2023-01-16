@@ -1,0 +1,14 @@
+.form-select {
+    width: unset;
+    border: none;
+    box-shadow: $shadow_1;
+    font-size: 0.875rem;
+    border-radius: $radius_1;
+
+    &:focus {
+        box-shadow: $shadow_1;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}
