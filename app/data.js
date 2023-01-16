@@ -8,6 +8,7 @@ export const uploadData = [
         type: 'latestUpload',
         items: [
             {
+                id: 1,
                 categoryIcon: <MdWaterDrop />,
                 title: 'Title here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -20,12 +21,14 @@ export const uploadData = [
         type: 'event',
         items: [
             {
-                categoryIcon: <MdWaterDrop />,
+                id: 1,
+                categoryIcon: '',
                 title: 'Title here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
                 image: img2,
             },
             {
+                id: 2,
                 categoryIcon: <MdFitnessCenter />,
                 title: 'Title here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -38,24 +41,28 @@ export const uploadData = [
         type: 'video',
         items: [
             {
+                id: 1,
                 categoryIcon: <MdWaterDrop />,
                 title: 'Title here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
                 image: img2,
             },
             {
+                id: 2,
                 categoryIcon: <MdFitnessCenter />,
                 title: 'Title here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
                 image: img3,
             },
             {
+                id: 3,
                 categoryIcon: <MdWaterDrop />,
                 title: 'Title here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
                 image: img2,
             },
             {
+                id: 4,
                 categoryIcon: <MdFitnessCenter />,
                 title: 'Title here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
@@ -68,28 +75,28 @@ export const uploadData = [
         type: 'discussions',
         items: [
             {
+                id: 1,
                 categoryIcon: <MdWaterDrop />,
-                title: 'Title here',
+                title: 'Title here Title here Title here Title here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                image: img2,
             },
             {
+                id: 2,
                 categoryIcon: <MdFitnessCenter />,
                 title: 'Title here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                image: img3,
             },
             {
-                categoryIcon: <MdWaterDrop />,
+                id: 3,
+                categoryIcon: '',
                 title: 'Title here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                image: img2,
             },
             {
+                id: 4,
                 categoryIcon: <MdFitnessCenter />,
                 title: 'Title here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                image: img3,
             },
         ],
     },

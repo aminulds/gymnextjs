@@ -7,7 +7,9 @@
 html {
     body {
         * {
-            font-size: 16px;
+            font-size: 14px;
+            font-family: $fontPoppins;
+            font-weight: 400;
         }
 
         // ----------- Components ------------ //
@@ -18,9 +20,15 @@ html {
         @import '../components//TopBar//topBar.scss';
         // Sidebar
         @import '../components//Sidebar//sideBar.scss';
+        // UI Card
+        @import '../components/Card/card.scss';
+        // Footer
+        @import '../components/Footer/footer.scss';
 
         // ----------- Pages ------------ //
         // Auth
         @import '../app/auth/auth.scss';
+        //Home
+        @import '../app/home.scss';
     }
 }

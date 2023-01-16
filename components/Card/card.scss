@@ -1,0 +1,113 @@
+.card {
+    border: none;
+    box-shadow: $shadow_1;
+    border-radius: $radius_2;
+
+    .card-body {
+        .card-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.75rem;
+
+            .link {
+                font-size: 1.5rem;
+                font-weight: 600;
+                margin-bottom: 0;
+                text-decoration: none;
+                color: $colorPrimary;
+                transition: $transition_1;
+
+                &:hover {
+                    color: $colorBlack;
+                }
+            }
+
+            .categoryIcon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0.5rem;
+                background-color: $colorPrimary;
+                color: $colorWhite;
+                border-radius: $radius_circle;
+            }
+        }
+
+        .text-truncate2 {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            white-space: unset;
+        }
+    }
+
+    .card-footer {
+        border-top: none;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0;
+
+        .dateTime {
+            padding: 0.75rem 1rem;
+            width: 100%;
+        }
+
+        .dateTime {
+            background-color: $colorBlack;
+            color: $colorWhite;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom-left-radius: $radius_2;
+
+            .date {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .icon {
+                    color: $colorPrimary;
+                    margin-right: 0.5rem;
+                }
+
+                &:not(:last-child) {
+                    padding-right: 0.75rem;
+                }
+            }
+        }
+
+        .rounded-bottom {
+            border-bottom-left-radius: $radius_1 !important;
+            border-bottom-right-radius: $radius_1 !important;
+        }
+
+        .card-link {
+            background-color: $colorPrimary;
+            border-bottom-right-radius: $radius_2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1rem;
+            white-space: nowrap;
+
+            .link {
+                color: $colorWhite;
+                text-decoration: none;
+                transition: $transition_1;
+                font-weight: 600;
+
+                .icon {
+                    margin-left: 0.5rem;
+                }
+
+                &:hover {
+                    color: $colorBlack;
+                }
+            }
+        }
+    }
+}

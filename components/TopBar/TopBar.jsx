@@ -11,7 +11,7 @@ const icons = [<BsFillBellFill />];
 
 const TopBar = ({ pageIcon, labelTitle }) => {
     return (
-        <div className="topBar">
+        <div className="topBar sticky-top">
             <div className="topBarLogo">
                 <NavToogler />
                 <Link href="/">

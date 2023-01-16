@@ -1,0 +1,30 @@
+.home {
+    .sectionTitle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1.5rem;
+
+        .title {
+            font-size: 2rem;
+            font-weight: 500;
+            color: $colorPrimary;
+            font-family: $fontBebasNeue;
+            margin-bottom: 0;
+        }
+
+        .link {
+            text-decoration: none;
+            color: $colorBlack;
+            transition: $transition_1;
+
+            .icon {
+                margin-left: 0.5rem;
+            }
+
+            &:hover {
+                color: $colorPrimary;
+            }
+        }
+    }
+}

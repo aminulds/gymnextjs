@@ -1,0 +1,23 @@
+footer {
+    background-color: $colorBgGray;
+    padding: 1rem 0;
+    .container {
+        .mainFooter {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .nav-link {
+                color: $colorPrimary;
+
+                &:hover {
+                    color: $colorBlack;
+                }
+            }
+
+            .copyright {
+                display: flex;
+            }
+        }
+    }
+}
