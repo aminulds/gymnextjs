@@ -1,12 +1,13 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import Card from '../components/Card/Card';
 import { uploadData } from './data';
-import { MdArrowForward } from 'react-icons/md';
+import { MdArrowForward, MdForum } from 'react-icons/md';
 
 const Home = () => {
+    const discussionsIcon = <MdForum />;
+
     const latestUpload = uploadData.filter((latesItems) => {
         return latesItems.type === 'latestUpload';
     });
@@ -92,7 +93,7 @@ const Home = () => {
                 {/* POPULAR Discussions */}
                 <div className="sectionTitle">
                     <h4 className="title">Popular Discussions</h4>
-                    <Link className="link" href="#">
+                    <Link onClick={() => PageLabelHandler(discussionsIcon)} className="link" href="/discussions">
                         All Discussions
                         <span className="icon">
                             <MdArrowForward />

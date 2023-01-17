@@ -19,7 +19,7 @@ const SignIn = () => {
 
                         <div className="col d-flex align-items-center">
                             <div className="authFormWrap">
-                                <Image className="logo img-fluid mb-4 mb-md-5" src={imgLogo} />
+                                <Image className="logo img-fluid mb-4 mb-md-5" src={imgLogo} alt="Logo" />
                                 <h5 className="logInTitle text-uppercase mb-4">Login to your account</h5>
 
                                 <form className="mb-3">

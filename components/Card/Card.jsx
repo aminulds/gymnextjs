@@ -8,7 +8,7 @@ import { BiUserPin } from 'react-icons/bi';
 const Card = ({ img, title, categoryIcon, description, event }) => {
     return (
         <div className="card">
-            <Image className="img-fluid card-img-top" src={img} />
+            {img && <Image className="img-fluid card-img-top" src={img} width={1290} height={802} quality={100} alt="Post Image" />}
 
             <div className="card-body">
                 <div className="card-title">

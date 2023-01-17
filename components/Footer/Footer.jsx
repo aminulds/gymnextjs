@@ -3,7 +3,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer className="sticky-sm-bottom">
+        <footer className="sticky-sm-bottom mt-4">
             <div className="container">
                 <div className="mainFooter">
                     <Link href="#" className="nav-link">

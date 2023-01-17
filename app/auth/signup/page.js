@@ -20,7 +20,7 @@ const SignUp = () => {
 
                             <div className="col d-flex align-items-center justify-content-center">
                                 <div className="authFormWrap">
-                                    <Image className="logo img-fluid mb-4 mb-md-5" src={imgLogo} />
+                                    <Image className="logo img-fluid mb-4 mb-md-5" src={imgLogo} alt="Logo" />
                                     <h5 className="logInTitle text-uppercase mb-4">Create Your Account</h5>
 
                                     <form className="mb-3">
