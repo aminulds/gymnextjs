@@ -30,5 +30,7 @@ html {
         @import '../app/auth/auth.scss';
         //mainContent
         @import '../app/mainContent.scss';
+        // Discussion Details
+        @import '../app/discussions/details/discussionDetails.scss';
     }
 }

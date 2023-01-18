@@ -1,5 +1,6 @@
-import Link from 'next/link';
+import { MdSend } from 'react-icons/md';
 import React from 'react';
+import Button from '../../../components/Input/Button';
 import { uploadData } from '../../data';
 
 const Details = () => {
@@ -29,10 +30,11 @@ const Details = () => {
 
             {/* Comment Box */}
             <div className="detailSection mt-4">
-                <h5>Leave a message</h5>
-                <div class="form-floating ">
-                    <textarea className="form-control" placeholder="Leave a comment here" id="floatingTextarea2"></textarea>
-                    <label htmlFor="floatingTextarea2">Comments</label>
+                <h5 className="title">Leave a Comments</h5>
+                <div class="form-floating">
+                    <textarea className="form-control commentsBox" placeholder="Leave a comment here" id="floatingTextarea2" rows="8"></textarea>
+                    <label htmlFor="floatingTextarea2">Start typing...</label>
+                    <Button className="btnSend" type="button" id="commentSend" text="Send" icon={<MdSend />} />
                 </div>
             </div>
         </div>
