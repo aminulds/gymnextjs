@@ -37,6 +37,11 @@ const Details = () => {
                     <Button className="btnSend" type="button" id="commentSend" text="Send" icon={<MdSend />} />
                 </div>
             </div>
+
+            {/* Show Comments */}
+            <div className="detailSection mt-4">
+                <h5 className="title">Comments (3)</h5>
+            </div>
         </div>
     );
 };
