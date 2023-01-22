@@ -1,0 +1,13 @@
+.comments {
+    padding: 1rem;
+
+    .link {
+        text-decoration: none;
+        color: $colorPrimary;
+        transition: $transition_1;
+
+        &:hover {
+            color: $colorBlack;
+        }
+    }
+}
