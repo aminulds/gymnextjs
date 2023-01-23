@@ -6,14 +6,14 @@ import { RiTimerFlashFill } from 'react-icons/ri';
 import { BiUserPin } from 'react-icons/bi';
 import Button from '../Input/Button';
 
-const Card = ({ img, title, categoryIcon, description, event, recomended }) => {
+const Card = ({ img, title, url, categoryIcon, description, event, recomended }) => {
     return (
         <div className="card">
             {img && <Image className="img-fluid card-img-top" src={img} width={1290} height={802} quality={100} alt="Post Image" />}
 
             <div className="card-body">
                 <div className="card-title">
-                    <Link href="#" className="link text-truncate">
+                    <Link href={url ? `${url}` : '#'} className="link text-truncate">
                         {title}
                     </Link>
                     {categoryIcon && <span className="categoryIcon">{categoryIcon}</span>}

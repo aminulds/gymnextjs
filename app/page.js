@@ -106,7 +106,7 @@ const Home = () => {
                         <>
                             {item.items.map((item) => (
                                 <div className="col" key={item.id}>
-                                    <Card img={item.image} title={item.title} description={item.description} categoryIcon={item.categoryIcon} />
+                                    <Card img={item.image} title={item.title} url="discussions/details" description={item.description} categoryIcon={item.categoryIcon} />
                                 </div>
                             ))}
                         </>
