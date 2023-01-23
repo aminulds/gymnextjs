@@ -4,6 +4,7 @@ import Button from '../../../components/Input/Button';
 import { uploadData } from '../../data';
 import Comments from './Comments';
 import { discussionsDetailsData } from './data';
+import Image from 'next/image';
 
 const Details = () => {
     const discussionsData = uploadData.filter((eventItem) => {
@@ -17,6 +18,7 @@ const Details = () => {
                 <>
                     {item.items.slice(0, 1).map((item) => (
                         <div className="card p-3">
+                            {item.image && <Image className="img-fluid card-img-top" src={item.image} width={1290} height={802} quality={100} alt="Post Image" />}
                             <div className="card-body">
                                 <div className="card-title">
                                     <h5 className="link">{item.title}</h5>

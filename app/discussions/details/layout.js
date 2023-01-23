@@ -1,11 +1,20 @@
 import React from 'react';
 import Card from '../../../components/Card/Card';
+import Button from '../../../components/Input/Button';
 import { uploadData } from '../../data';
+import { MdArrowRightAlt } from 'react-icons/md';
+import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 const DiscussionsDetailsLayout = ({ children }) => {
+    const router = useRouter();
     const discussionsData = uploadData.filter((eventItem) => {
         return eventItem.type === 'discussions';
     });
+
+    const routerPushHandler = () => {
+        router.push('/discussions');
+    };
 
     return (
         <div className="col-12 col-lg-10">
@@ -24,11 +33,20 @@ const DiscussionsDetailsLayout = ({ children }) => {
                                 <>
                                     {item.items.slice(0, 4).map((item) => (
                                         <div className="col" key={item.id}>
-                                            <Card img={item.image} title={item.title} description={item.description} categoryIcon={item.categoryIcon} recomended={true} />
+                                            <Card img={item.image} title={item.title} url="/discussions/details" description={item.description} categoryIcon={item.categoryIcon} recomended={true} />
                                         </div>
                                     ))}
                                 </>
                             ))}
+                        </div>
+
+                        <div className="mt-4 d-flex align-items-center justify-content-center">
+                            <Link href="/discussions" className="btn btnPrimary rounded-pill d-flex align-items-center justify-content-around ">
+                                Latest Discussions{' '}
+                                <span className="fs-4">
+                                    <MdArrowRightAlt />
+                                </span>
+                            </Link>
                         </div>
                     </div>
                 </div>

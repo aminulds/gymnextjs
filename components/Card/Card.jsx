@@ -60,7 +60,7 @@ const Card = ({ img, title, url, categoryIcon, description, event, recomended })
                         </div>
 
                         {recomended ? (
-                            <Button type="button" id="discussion" text="Join" className="btnDiscussion rounded-pill w-50" icon={<MdArrowRightAlt />} />
+                            <Button type="button" id="discussion" text="Join" className="btnDiscussion rounded-pill w-50 d-flex align-items-center justify-content-around" icon={<MdArrowRightAlt />} />
                         ) : (
                             <>
                                 <div className="date">
