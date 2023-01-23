@@ -12,7 +12,7 @@ const PageLabel = ({ pageIcon, labelTitle }) => {
             </button>
 
             <button className="btn d-none d-md-inline-flex btnPrimaryOutline text-capitalize shadow-sm">
-                <span className="me-2">{pageIcon}</span> {labelTitle}
+                <span className="me-2">{pageIcon}</span> <span className="text-muted">{labelTitle}</span>
             </button>
         </div>
     );
