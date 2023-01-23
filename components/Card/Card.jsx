@@ -1,11 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaCalendarAlt } from 'react-icons/fa';
-import { MdArrowForward, MdChat } from 'react-icons/md';
+import { MdArrowForward, MdChat, MdArrowRightAlt } from 'react-icons/md';
 import { RiTimerFlashFill } from 'react-icons/ri';
 import { BiUserPin } from 'react-icons/bi';
+import Button from '../Input/Button';
 
-const Card = ({ img, title, categoryIcon, description, event }) => {
+const Card = ({ img, title, categoryIcon, description, event, recomended }) => {
     return (
         <div className="card">
             {img && <Image className="img-fluid card-img-top" src={img} width={1290} height={802} quality={100} alt="Post Image" />}
@@ -58,19 +59,25 @@ const Card = ({ img, title, categoryIcon, description, event }) => {
                             <span>1400</span>
                         </div>
 
-                        <div className="date">
-                            <span className="icon">
-                                <BiUserPin />
-                            </span>
-                            <span>120</span>
-                        </div>
+                        {recomended ? (
+                            <Button type="button" id="discussion" text="Join" className="btnDiscussion rounded-pill w-50" icon={<MdArrowRightAlt />} />
+                        ) : (
+                            <>
+                                <div className="date">
+                                    <span className="icon">
+                                        <BiUserPin />
+                                    </span>
+                                    <span>120</span>
+                                </div>
 
-                        <div className="date">
-                            <span className="icon">
-                                <FaCalendarAlt />
-                            </span>
-                            <span>15-11-2022</span>
-                        </div>
+                                <div className="date">
+                                    <span className="icon">
+                                        <FaCalendarAlt />
+                                    </span>
+                                    <span>15-11-2022</span>
+                                </div>
+                            </>
+                        )}
                     </div>
                 </div>
             )}

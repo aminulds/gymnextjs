@@ -9,5 +9,10 @@
         &:hover {
             color: $colorBlack;
         }
+
+        &:focus {
+            box-shadow: none;
+            border-color: $colorWhite;
+        }
     }
 }

@@ -24,7 +24,7 @@ const DiscussionsDetailsLayout = ({ children }) => {
                                 <>
                                     {item.items.slice(0, 4).map((item) => (
                                         <div className="col" key={item.id}>
-                                            <Card img={item.image} title={item.title} description={item.description} categoryIcon={item.categoryIcon} />
+                                            <Card img={item.image} title={item.title} description={item.description} categoryIcon={item.categoryIcon} recomended={true} />
                                         </div>
                                     ))}
                                 </>

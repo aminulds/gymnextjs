@@ -21,9 +21,9 @@ const Comments = ({ img, usrName, time, love, text, replyCount }) => {
                 <span className="text-muted">
                     <AiFillHeart /> {love}
                 </span>
-                <Link href="#" className="link">
+                <button className="btn link">
                     <GoReply /> Reply
-                </Link>
+                </button>
                 {replyCount && <span className="text-muted">Replies ({replyCount})</span>}
             </div>
         </div>
