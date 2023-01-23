@@ -26,7 +26,7 @@ const DiscussionsDetailsLayout = ({ children }) => {
                     {/* Discussion Recomendation */}
                     <div className="col-12 col-md-4">
                         <div className="sectionTitle">
-                            <h4 className="title">Recommended Discussions</h4>
+                            <h4 className="title">Recommended</h4>
                         </div>
                         <div className="row g-4 row-cols-1 row-cols-sm-2 row-cols-md-1">
                             {discussionsData.map((item) => (

@@ -1,5 +1,6 @@
 import { useRouter } from 'next/navigation';
 import { BiArrowBack } from 'react-icons/bi';
+import { MdLabelImportant } from 'react-icons/md';
 
 const PageLabel = ({ pageIcon, labelTitle }) => {
     const router = useRouter();
@@ -12,7 +13,10 @@ const PageLabel = ({ pageIcon, labelTitle }) => {
             </button>
 
             <button className="btn d-none d-md-inline-flex btnPrimaryOutline text-capitalize shadow-sm">
-                <span className="me-2">{pageIcon}</span> <span className="text-muted">{labelTitle}</span>
+                <span className="me-2">
+                    <MdLabelImportant />
+                </span>
+                <span className="text-muted">{labelTitle}</span>
             </button>
         </div>
     );

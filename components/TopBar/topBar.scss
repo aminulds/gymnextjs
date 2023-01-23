@@ -37,8 +37,10 @@
         }
 
         .backBtn {
+            color: $colorPrimary;
+
             &:hover {
-                color: $colorPrimary;
+                color: $colorBlack;
             }
         }
     }
@@ -53,6 +55,7 @@
         justify-content: center;
         margin-left: 1.5rem;
         box-shadow: $shadow_1;
+        transition: $transition_1;
 
         .notificationCount {
             display: flex;
@@ -61,6 +64,15 @@
             padding: 0.75rem;
             background-color: $colorPrimary;
             left: 80%;
+        }
+
+        &:active {
+            border-color: $colorWhite;
+            color: $colorBlack;
+        }
+        &:hover {
+            color: $colorBlack;
+            box-shadow: $shadow_2;
         }
     }
 }
