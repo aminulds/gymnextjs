@@ -44,14 +44,14 @@ const Details = () => {
             <div className="detailSection mt-4">
                 <h5 className="title">Comments ({discussionsDetailsData.length})</h5>
 
-                <div className="row g-4 row-cols-1">
+                <div className="">
                     {discussionsDetailsData.map((item) => (
-                        <div key={item.id} className="col">
+                        <div key={item.id} className="mt-4">
                             <Comments img={item.img} usrName={item.usrName} time={item.time} love={item.love} text={item.text} replyCount={item.reply.length} />
                             {item.reply && (
-                                <div className="row mt-2 g-2 row-cols-1 ms-4 ms-md-5">
+                                <div className="mt-3 ms-4 ms-md-5">
                                     {item.reply.map((replyItem) => (
-                                        <div key={replyItem.id} className="col">
+                                        <div key={replyItem.id} className="mt-2">
                                             <Comments img={replyItem.img} usrName={replyItem.usrName} time={replyItem.time} love={replyItem.love} text={replyItem.text} />
                                         </div>
                                     ))}
