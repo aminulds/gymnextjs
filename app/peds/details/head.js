@@ -1,7 +1,7 @@
 export default function Head() {
     return (
         <>
-            <title>Progress</title>
+            <title>Peds Details</title>
         </>
     );
 }

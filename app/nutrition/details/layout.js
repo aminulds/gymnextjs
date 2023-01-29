@@ -4,7 +4,9 @@ import { uploadData } from '../../data';
 import { MdArrowRightAlt } from 'react-icons/md';
 import Link from 'next/link';
 
-const DiscussionsDetailsLayout = ({ children }) => {
+const PedsDetailsLayout = ({ children }) => {
+    let popularItemLimit = 0;
+
     return (
         <div className="col-12 col-lg-10">
             <div className="mainContent">
@@ -20,22 +22,22 @@ const DiscussionsDetailsLayout = ({ children }) => {
                         <div className="row g-4 row-cols-1 row-cols-sm-2 row-cols-md-1">
                             {uploadData.map((item) => (
                                 <>
-                                    {item.type === 'discussions' && (
+                                    {item.items.map((item) => (
                                         <>
-                                            {item.items.slice(0, 4).map((item) => (
+                                            {item.category === 'nutrition' && (popularItemLimit += 1) <= 4 && (
                                                 <div className="col" key={item.id}>
-                                                    <Card img={item.image} title={item.title} url="/discussions/details" description={item.description} categoryIcon={item.categoryIcon} recomended={true} />
+                                                    <Card img={item.image} title={item.title} url="nutrition/details" description={item.description} categoryIcon={item.categoryIcon} />
                                                 </div>
-                                            ))}
+                                            )}
                                         </>
-                                    )}
+                                    ))}
                                 </>
                             ))}
                         </div>
 
                         <div className="mt-4 d-flex align-items-center justify-content-center">
-                            <Link href="/discussions" className="btn btnPrimary rounded-pill d-flex align-items-center justify-content-around ">
-                                Latest Discussions{' '}
+                            <Link href="/nutrition" className="btn btnPrimary rounded-pill d-flex align-items-center justify-content-around ">
+                                Latest Nutrition
                                 <span className="fs-4">
                                     <MdArrowRightAlt />
                                 </span>
@@ -48,4 +50,4 @@ const DiscussionsDetailsLayout = ({ children }) => {
     );
 };
 
-export default DiscussionsDetailsLayout;
+export default PedsDetailsLayout;

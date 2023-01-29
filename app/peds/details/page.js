@@ -7,14 +7,15 @@ import { commentsDetailsData } from './data';
 import Image from 'next/image';
 
 const Details = () => {
+    let popularItemLimit = 0;
     return (
         <div className="discussionDetails">
             {/* Item Details */}
             {uploadData.map((item) => (
                 <>
-                    {item.type === 'discussions' && (
+                    {item.items.map((item) => (
                         <>
-                            {item.items.slice(0, 1).map((item) => (
+                            {item.category === 'peds' && (popularItemLimit += 1) <= 1 && (
                                 <div className="card p-3">
                                     {item.image && <Image className="img-fluid card-img-top" src={item.image} width={1290} height={802} quality={100} alt="Post Image" />}
                                     <div className="card-body">
@@ -26,9 +27,9 @@ const Details = () => {
                                         <p className="card-text">{item.description}</p>
                                     </div>
                                 </div>
-                            ))}
+                            )}
                         </>
-                    )}
+                    ))}
                 </>
             ))}
 

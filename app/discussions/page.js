@@ -5,10 +5,6 @@ import Select from '../../components/Select/Select';
 import { uploadData } from '../data';
 
 const Discussions = () => {
-    const discussionsData = uploadData.filter((eventItem) => {
-        return eventItem.type === 'discussions';
-    });
-
     return (
         <div className="col-12 col-lg-10">
             <div className="mainContent">
@@ -18,13 +14,17 @@ const Discussions = () => {
                 </div>
 
                 <div className="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 mb-5">
-                    {discussionsData.map((item) => (
+                    {uploadData.map((item) => (
                         <>
-                            {item.items.slice(0, 4).map((item) => (
-                                <div className="col" key={item.id}>
-                                    <Card img={item.image} title={item.title} url="discussions/details" description={item.description} categoryIcon={item.categoryIcon} />
-                                </div>
-                            ))}
+                            {item.type === 'discussions' && (
+                                <>
+                                    {item.items.slice(0, 4).map((item) => (
+                                        <div className="col" key={item.id}>
+                                            <Card img={item.image} title={item.title} url="discussions/details" description={item.description} categoryIcon={item.categoryIcon} />
+                                        </div>
+                                    ))}
+                                </>
+                            )}
                         </>
                     ))}
                 </div>
@@ -39,13 +39,17 @@ const Discussions = () => {
                 </div>
 
                 <div className="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 mb-5">
-                    {discussionsData.map((item) => (
+                    {uploadData.map((item) => (
                         <>
-                            {item.items.map((item) => (
-                                <div className="col" key={item.id}>
-                                    <Card img={item.image} title={item.title} url="discussions/details" description={item.description} categoryIcon={item.categoryIcon} />
-                                </div>
-                            ))}
+                            {item.type === 'discussions' && (
+                                <>
+                                    {item.items.map((item) => (
+                                        <div className="col" key={item.id}>
+                                            <Card img={item.image} title={item.title} url="discussions/details" description={item.description} categoryIcon={item.categoryIcon} />
+                                        </div>
+                                    ))}
+                                </>
+                            )}
                         </>
                     ))}
                 </div>
