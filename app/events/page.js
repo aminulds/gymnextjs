@@ -20,7 +20,7 @@ const Discussions = () => {
                                 <>
                                     {item.items.slice(0, 4).map((item) => (
                                         <div className="col" key={item.id}>
-                                            <Card img={item.image} title={item.title} url="events/details" description={item.description} categoryIcon={item.categoryIcon} />
+                                            <Card img={item.image} title={item.title} url="events/details" description={item.description} categoryIcon={item.categoryIcon} event={true} />
                                         </div>
                                     ))}
                                 </>
@@ -45,7 +45,7 @@ const Discussions = () => {
                                 <>
                                     {item.items.map((item) => (
                                         <div className="col" key={item.id}>
-                                            <Card img={item.image} title={item.title} url="events/details" description={item.description} categoryIcon={item.categoryIcon} />
+                                            <Card img={item.image} title={item.title} url="events/details" description={item.description} categoryIcon={item.categoryIcon} event={true} />
                                         </div>
                                     ))}
                                 </>
