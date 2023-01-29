@@ -3,17 +3,11 @@
 import Link from 'next/link';
 import Card from '../components/Card/Card';
 import { uploadData } from './data';
-import { MdArrowForward, MdForum } from 'react-icons/md';
+import { MdArrowForward } from 'react-icons/md';
 
 const Home = () => {
-    const discussionsIcon = <MdForum />;
-
     const latestUpload = uploadData.filter((latesItems) => {
         return latesItems.type === 'latestUpload';
-    });
-
-    const eventData = uploadData.filter((eventItem) => {
-        return eventItem.type === 'event';
     });
 
     const videoData = uploadData.filter((eventItem) => {
@@ -32,7 +26,6 @@ const Home = () => {
                         <div className="sectionTitle">
                             <h4 className="title">Latest Uploads</h4>
                         </div>
-
                         {latestUpload.map((item) => (
                             <>
                                 {item.items.map((item) => (
@@ -45,7 +38,7 @@ const Home = () => {
                     <div className="col-lg-8">
                         <div className="sectionTitle">
                             <h4 className="title">Upcoming Events</h4>
-                            <Link className="link" href="#">
+                            <Link className="link" href="/events">
                                 All Events
                                 <span className="icon">
                                     <MdArrowForward />
@@ -54,13 +47,17 @@ const Home = () => {
                         </div>
 
                         <div className="row g-4 row-cols-1 row-cols-md-2">
-                            {eventData.map((item) => (
+                            {uploadData.map((item) => (
                                 <>
-                                    {item.items.map((item) => (
-                                        <div className="col" key={item.id}>
-                                            <Card img={item.image} title={item.title} description={item.description} categoryIcon={item.categoryIcon} event={true} />
-                                        </div>
-                                    ))}
+                                    {item.type === 'event' && (
+                                        <>
+                                            {item.items.slice(0, 2).map((item) => (
+                                                <div className="col" key={item.id}>
+                                                    <Card img={item.image} url="/events/details" title={item.title} description={item.description} categoryIcon={item.categoryIcon} event={true} />
+                                                </div>
+                                            ))}
+                                        </>
+                                    )}
                                 </>
                             ))}
                         </div>
@@ -70,7 +67,7 @@ const Home = () => {
                 {/* lASTEST Videos */}
                 <div className="sectionTitle">
                     <h4 className="title">Latest Videos</h4>
-                    <Link className="link" href="#">
+                    <Link className="link" href="/videos">
                         All Videos
                         <span className="icon">
                             <MdArrowForward />
@@ -79,13 +76,17 @@ const Home = () => {
                 </div>
 
                 <div className="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 mb-5">
-                    {videoData.map((item) => (
+                    {uploadData.map((item) => (
                         <>
-                            {item.items.map((item) => (
-                                <div className="col" key={item.id}>
-                                    <Card img={item.image} title={item.title} description={item.description} categoryIcon={item.categoryIcon} />
-                                </div>
-                            ))}
+                            {item.type === 'video' && (
+                                <>
+                                    {item.items.slice(0, 8).map((item) => (
+                                        <div className="col" key={item.id}>
+                                            <Card img={item.image} title={item.title} url="videos/details" description={item.description} categoryIcon={item.categoryIcon} />
+                                        </div>
+                                    ))}
+                                </>
+                            )}
                         </>
                     ))}
                 </div>
@@ -93,7 +94,7 @@ const Home = () => {
                 {/* POPULAR Discussions */}
                 <div className="sectionTitle">
                     <h4 className="title">Popular Discussions</h4>
-                    <Link onClick={() => PageLabelHandler(discussionsIcon)} className="link" href="/discussions">
+                    <Link className="link" href="/discussions">
                         All Discussions
                         <span className="icon">
                             <MdArrowForward />
@@ -102,13 +103,17 @@ const Home = () => {
                 </div>
 
                 <div className="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 mb-5">
-                    {discussionsData.map((item) => (
+                    {uploadData.map((item) => (
                         <>
-                            {item.items.map((item) => (
-                                <div className="col" key={item.id}>
-                                    <Card img={item.image} title={item.title} url="discussions/details" description={item.description} categoryIcon={item.categoryIcon} />
-                                </div>
-                            ))}
+                            {item.type === 'discussions' && (
+                                <>
+                                    {item.items.slice(0, 8).map((item) => (
+                                        <div className="col" key={item.id}>
+                                            <Card img={item.image} title={item.title} url="discussions/details" description={item.description} categoryIcon={item.categoryIcon} />
+                                        </div>
+                                    ))}
+                                </>
+                            )}
                         </>
                     ))}
                 </div>

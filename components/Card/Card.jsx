@@ -41,7 +41,7 @@ const Card = ({ img, title, url, categoryIcon, description, event, recomended })
                     </div>
 
                     <div className="card-link">
-                        <Link className="link" href="#">
+                        <Link className="link" href={url ? `${url}` : '#'}>
                             <span className="d-none d-sm-inline d-md-none d-lg-inline">View Event</span>
                             <span className="icon">
                                 <MdArrowForward />
