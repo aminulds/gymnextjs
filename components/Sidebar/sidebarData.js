@@ -1,4 +1,4 @@
-import { MdSpaceDashboard, MdForum, MdWaterDrop, MdFitnessCenter, MdExpandMore, MdSettings } from 'react-icons/md';
+import { MdSpaceDashboard, MdForum, MdWaterDrop, MdFitnessCenter, MdExpandMore } from 'react-icons/md';
 import { IoMdNutrition } from 'react-icons/io';
 
 export const sideBarNavData = [
@@ -59,17 +59,6 @@ export const sideBarNavData = [
                         icon: <MdFitnessCenter />,
                     },
                 ],
-            },
-        ],
-    },
-
-    {
-        navType: 'Account',
-        navItems: [
-            {
-                title: 'Settings',
-                path: '/settings',
-                icon: <MdSettings />,
             },
         ],
     },

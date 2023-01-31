@@ -1,0 +1,23 @@
+.userProfile {
+    .profileImage {
+        position: absolute;
+        top: 3rem;
+    }
+
+    .card-body {
+        .border-bottom {
+            border-bottom: $border_1;
+
+            .userName {
+                font-size: 1.25rem;
+                font-weight: 500;
+            }
+
+            .icon,
+            .membertType {
+                color: $colorPrimary;
+                font-weight: 600;
+            }
+        }
+    }
+}

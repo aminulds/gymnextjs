@@ -9,7 +9,7 @@ import Link from 'next/link';
 
 const icons = [<BsFillBellFill />];
 
-const TopBar = ({ pageIcon, labelTitle }) => {
+const TopBar = ({ labelTitle }) => {
     return (
         <div className="topBar sticky-top">
             <div className="topBarLogo">
@@ -17,7 +17,7 @@ const TopBar = ({ pageIcon, labelTitle }) => {
                 <Link href="/">
                     <Image className="logo img-fluid w-75" src={imgLogo} alt="Logo" />
                 </Link>
-                <PageLabel pageIcon={pageIcon} labelTitle={labelTitle} />
+                <PageLabel labelTitle={labelTitle} />
             </div>
 
             <Notification iconName={icons[0]} notificatinCount="20" />

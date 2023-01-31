@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
             <body>
                 <div className="container-fluid px-md-4">
                     {/* Top Bar */}
-                    <TopBar pageIcon={pageIcon} labelTitle={`${router === '/' ? 'Home' : router.replaceAll('/', ' > ')}`} />
+                    <TopBar labelTitle={`${router === '/' ? 'Home' : router.replaceAll('/', ' > ')}`} />
 
                     <div className="row pt-4">
                         {/* Sidebar */}

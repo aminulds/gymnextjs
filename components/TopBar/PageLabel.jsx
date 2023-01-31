@@ -2,13 +2,13 @@ import { useRouter } from 'next/navigation';
 import { BiArrowBack } from 'react-icons/bi';
 import { MdLabelImportant } from 'react-icons/md';
 
-const PageLabel = ({ pageIcon, labelTitle }) => {
+const PageLabel = ({ labelTitle }) => {
     const router = useRouter();
     return (
         <div>
             <button onClick={() => router.back()} className="btn backBtn  text-capitalize shadow-sm">
-                <span>
-                    <BiArrowBack /> Back
+                <span className="d-flex align-items-center">
+                    <BiArrowBack /> <span className="d-none ms-2 d-sm-flex">Back</span>
                 </span>
             </button>
 

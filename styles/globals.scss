@@ -10,12 +10,25 @@ html {
         font-family: $fontPoppins;
         font-weight: 400;
 
+        .btn {
+            &:active,
+            &:hover {
+                border-color: $colorPrimary !important;
+            }
+        }
+
+        .text-primary {
+            color: $colorPrimary !important;
+        }
+
         // ----------- Components ------------ //
         // Input
         @import '../components/Input/input.scss';
         @import '../components/Input/button.scss';
         // TopBar
         @import '../components//TopBar//topBar.scss';
+        // User Profile
+        @import '../components//UserProfile/userProfile.scss';
         // Sidebar
         @import '../components//Sidebar//sideBar.scss';
         // UI Card

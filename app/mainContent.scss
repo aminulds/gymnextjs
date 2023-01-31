@@ -28,3 +28,22 @@
         }
     }
 }
+
+.userPage {
+    .row {
+        .profileComments {
+            .commentTitle {
+                padding: 1rem;
+                background-color: $colorBgGray;
+                border-top-left-radius: $radius_2;
+                border-top-right-radius: $radius_2;
+                font-size: 1rem;
+            }
+
+            .comments {
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+            }
+        }
+    }
+}

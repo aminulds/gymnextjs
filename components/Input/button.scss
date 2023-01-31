@@ -11,4 +11,11 @@
         background: $colorPrimaryGradient2;
         color: $colorWhite;
     }
+
+    &.btn {
+        &:focus,
+        &:active {
+            box-shadow: none;
+        }
+    }
 }
