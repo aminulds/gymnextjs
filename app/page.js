@@ -10,14 +10,6 @@ const Home = () => {
         return latesItems.type === 'latestUpload';
     });
 
-    const videoData = uploadData.filter((eventItem) => {
-        return eventItem.type === 'video';
-    });
-
-    const discussionsData = uploadData.filter((eventItem) => {
-        return eventItem.type === 'discussions';
-    });
-
     return (
         <div className="col-12 col-lg-10">
             <div className="mainContent">

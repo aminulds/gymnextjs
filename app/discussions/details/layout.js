@@ -35,7 +35,7 @@ const DiscussionsDetailsLayout = ({ children }) => {
 
                         <div className="mt-4 d-flex align-items-center justify-content-center">
                             <Link href="/discussions" className="btn btnPrimary rounded-pill d-flex align-items-center justify-content-around ">
-                                Latest Discussions{' '}
+                                Latest Discussions
                                 <span className="fs-4">
                                     <MdArrowRightAlt />
                                 </span>
