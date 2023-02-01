@@ -1,5 +1,8 @@
 import { MdWaterDrop, MdFitnessCenter } from 'react-icons/md';
 import { IoMdNutrition } from 'react-icons/io';
+import upImg1 from '/public/images/latestUpload/1.png';
+import upImg2 from '/public/images/latestUpload/2.png';
+import upImg3 from '/public/images/latestUpload/3.png';
 
 export const uploadData = [
     {
@@ -11,7 +14,8 @@ export const uploadData = [
                 categoryIcon: <MdWaterDrop />,
                 title: 'Title 1 here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                image: 'https://i.ibb.co/F5h75nb/1.png',
+                // image: 'https://i.ibb.co/F5h75nb/1.png',
+                image: upImg1,
             },
         ],
     },
@@ -25,7 +29,8 @@ export const uploadData = [
                 categoryIcon: <MdWaterDrop />,
                 title: 'Title 1 here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                image: 'https://i.ibb.co/TtXXtq6/2.png',
+                // image: 'https://i.ibb.co/TtXXtq6/2.png',
+                image: upImg2,
             },
             {
                 id: 2,
@@ -33,7 +38,8 @@ export const uploadData = [
                 categoryIcon: <MdFitnessCenter />,
                 title: 'Title 2 here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                image: 'https://i.ibb.co/VxNFydV/3.png',
+                // image: 'https://i.ibb.co/VxNFydV/3.png',
+                image: upImg3,
             },
             {
                 id: 3,
@@ -41,7 +47,7 @@ export const uploadData = [
                 categoryIcon: <IoMdNutrition />,
                 title: 'Title 2 here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                image: 'https://i.ibb.co/TtXXtq6/2.png',
+                image: upImg1,
             },
             {
                 id: 4,
@@ -49,7 +55,7 @@ export const uploadData = [
                 categoryIcon: <MdFitnessCenter />,
                 title: 'Title 2 here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                image: 'https://i.ibb.co/VxNFydV/3.png',
+                image: upImg2,
             },
             {
                 id: 5,
@@ -57,7 +63,7 @@ export const uploadData = [
                 categoryIcon: <MdWaterDrop />,
                 title: 'Title 1 here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                image: 'https://i.ibb.co/TtXXtq6/2.png',
+                image: upImg3,
             },
             {
                 id: 6,
@@ -65,7 +71,7 @@ export const uploadData = [
                 categoryIcon: <IoMdNutrition />,
                 title: 'Title 2 here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                image: 'https://i.ibb.co/TtXXtq6/2.png',
+                image: upImg1,
             },
             {
                 id: 7,
@@ -73,7 +79,7 @@ export const uploadData = [
                 categoryIcon: <MdFitnessCenter />,
                 title: 'Title 2 here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                image: 'https://i.ibb.co/VxNFydV/3.png',
+                image: upImg2,
             },
             {
                 id: 8,
@@ -81,7 +87,7 @@ export const uploadData = [
                 categoryIcon: <MdWaterDrop />,
                 title: 'Title 1 here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                image: 'https://i.ibb.co/TtXXtq6/2.png',
+                image: upImg3,
             },
         ],
     },
@@ -95,7 +101,7 @@ export const uploadData = [
                 categoryIcon: <MdWaterDrop />,
                 title: 'Title 1 here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                image: 'https://i.ibb.co/TtXXtq6/2.png',
+                image: upImg1,
             },
             {
                 id: 2,
@@ -103,7 +109,7 @@ export const uploadData = [
                 categoryIcon: <MdFitnessCenter />,
                 title: 'Title 2 here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                image: 'https://i.ibb.co/VxNFydV/3.png',
+                image: upImg2,
             },
             {
                 id: 3,
@@ -111,7 +117,7 @@ export const uploadData = [
                 categoryIcon: <IoMdNutrition />,
                 title: 'Title 2 here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                image: 'https://i.ibb.co/VxNFydV/3.png',
+                image: upImg3,
             },
             {
                 id: 4,
@@ -119,7 +125,7 @@ export const uploadData = [
                 categoryIcon: <MdWaterDrop />,
                 title: 'Title 3 here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                image: 'https://i.ibb.co/TtXXtq6/2.png',
+                image: upImg1,
             },
             {
                 id: 5,
@@ -127,7 +133,7 @@ export const uploadData = [
                 categoryIcon: <MdFitnessCenter />,
                 title: 'Title 4 here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                image: 'https://i.ibb.co/VxNFydV/3.png',
+                image: upImg2,
             },
             {
                 id: 6,
@@ -135,7 +141,7 @@ export const uploadData = [
                 categoryIcon: <IoMdNutrition />,
                 title: 'Title 2 here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                image: 'https://i.ibb.co/TtXXtq6/2.png',
+                image: upImg3,
             },
             {
                 id: 7,
@@ -143,7 +149,7 @@ export const uploadData = [
                 categoryIcon: <MdWaterDrop />,
                 title: 'Title 1 here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                image: 'https://i.ibb.co/TtXXtq6/2.png',
+                image: upImg1,
             },
             {
                 id: 8,
@@ -151,7 +157,7 @@ export const uploadData = [
                 categoryIcon: <MdFitnessCenter />,
                 title: 'Title 2 here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                image: 'https://i.ibb.co/VxNFydV/3.png',
+                image: upImg2,
             },
         ],
     },
@@ -165,7 +171,7 @@ export const uploadData = [
                 categoryIcon: <MdWaterDrop />,
                 title: 'Title 1 here Title here Title here Title here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                image: 'https://i.ibb.co/TtXXtq6/2.png',
+                image: upImg3,
             },
             {
                 id: 2,
@@ -173,7 +179,7 @@ export const uploadData = [
                 categoryIcon: <MdFitnessCenter />,
                 title: 'Title 2 here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                image: 'https://i.ibb.co/VxNFydV/3.png',
+                image: upImg1,
             },
             {
                 id: 3,
@@ -181,7 +187,7 @@ export const uploadData = [
                 categoryIcon: <IoMdNutrition />,
                 title: 'Title 2 here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                image: 'https://i.ibb.co/VxNFydV/3.png',
+                image: upImg2,
             },
             {
                 id: 4,
@@ -189,7 +195,7 @@ export const uploadData = [
                 categoryIcon: <MdWaterDrop />,
                 title: 'Title 3 here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                image: 'https://i.ibb.co/VxNFydV/3.png',
+                image: upImg3,
             },
             {
                 id: 5,
@@ -197,7 +203,7 @@ export const uploadData = [
                 categoryIcon: <IoMdNutrition />,
                 title: 'Title 2 here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                image: 'https://i.ibb.co/TtXXtq6/2.png',
+                image: upImg1,
             },
             {
                 id: 6,
@@ -205,7 +211,7 @@ export const uploadData = [
                 categoryIcon: <MdFitnessCenter />,
                 title: 'Title 4 here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                image: 'https://i.ibb.co/TtXXtq6/2.png',
+                image: upImg2,
             },
             {
                 id: 7,
@@ -213,7 +219,7 @@ export const uploadData = [
                 categoryIcon: <MdWaterDrop />,
                 title: 'Title 5 here Title here Title here Title here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                image: 'https://i.ibb.co/VxNFydV/3.png',
+                image: upImg3,
             },
             {
                 id: 8,
@@ -221,7 +227,7 @@ export const uploadData = [
                 categoryIcon: <IoMdNutrition />,
                 title: 'Title 2 here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                image: 'https://i.ibb.co/VxNFydV/3.png',
+                image: upImg1,
             },
             {
                 id: 9,
@@ -229,7 +235,7 @@ export const uploadData = [
                 categoryIcon: <MdFitnessCenter />,
                 title: 'Title 6 here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                image: 'https://i.ibb.co/TtXXtq6/2.png',
+                image: upImg2,
             },
             {
                 id: 10,
@@ -237,7 +243,7 @@ export const uploadData = [
                 categoryIcon: <MdWaterDrop />,
                 title: 'Title 7 here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                image: 'https://i.ibb.co/VxNFydV/3.png',
+                image: upImg3,
             },
             {
                 id: 11,
@@ -245,7 +251,7 @@ export const uploadData = [
                 categoryIcon: <MdFitnessCenter />,
                 title: 'Title 8 here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                image: 'https://i.ibb.co/TtXXtq6/2.png',
+                image: upImg1,
             },
             {
                 id: 12,
@@ -253,7 +259,7 @@ export const uploadData = [
                 categoryIcon: <MdWaterDrop />,
                 title: 'Title 9 here Title here Title here Title here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                image: 'https://i.ibb.co/VxNFydV/3.png',
+                image: upImg2,
             },
             {
                 id: 13,
@@ -261,7 +267,7 @@ export const uploadData = [
                 categoryIcon: <IoMdNutrition />,
                 title: 'Title 2 here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                image: 'https://i.ibb.co/TtXXtq6/2.png',
+                image: upImg3,
             },
             {
                 id: 14,
@@ -269,7 +275,7 @@ export const uploadData = [
                 categoryIcon: <MdFitnessCenter />,
                 title: 'Title 10 here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                image: 'https://i.ibb.co/TtXXtq6/2.png',
+                image: upImg1,
             },
             {
                 id: 15,
@@ -277,7 +283,7 @@ export const uploadData = [
                 categoryIcon: <MdWaterDrop />,
                 title: 'Title 11 here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                image: 'https://i.ibb.co/VxNFydV/3.png',
+                image: upImg2,
             },
             {
                 id: 16,
@@ -285,7 +291,7 @@ export const uploadData = [
                 categoryIcon: <IoMdNutrition />,
                 title: 'Title 2 here',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-                image: 'https://i.ibb.co/VxNFydV/3.png',
+                image: upImg3,
             },
         ],
     },

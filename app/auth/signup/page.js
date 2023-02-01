@@ -3,7 +3,6 @@ import imgLogo from '/public/images/logo/logo.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import Input from '../../../components/Input/Input';
-import Button from '../../../components/Input/Button';
 
 const SignUp = () => {
     return (
@@ -27,7 +26,9 @@ const SignUp = () => {
                                         <Input type="text" name="name" id="name" placeholder="Your Name" />
                                         <Input type="email" name="email" id="email" placeholder="Email" />
                                         <Input type="password" name="password" id="password" placeholder="Password" />
-                                        <Button type="button" text="Create Account" id="createAccount" />
+                                        <button type="button" className="btn btnPrimary d-flex align-items-center justify-content-center">
+                                            Create Account
+                                        </button>
                                     </form>
                                     <Link className="nav-link mb-2" href="/auth/signin">
                                         or Log In!
