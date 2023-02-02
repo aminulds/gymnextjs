@@ -1,0 +1,39 @@
+.packages {
+    background-color: $colorSecondary;
+
+    .container {
+        .carousel {
+            .carousel-inner {
+                .carousel-item {
+                    .row {
+                        .col {
+                            .place-item {
+                                height: 100%;
+                                .card {
+                                    height: 100%;
+                                    .card-body {
+                                        padding: 1.5rem 1rem;
+                                        .price-time {
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: space-between;
+                                            padding-bottom: 1rem;
+                                            color: var(--dark_secondary_color);
+                                            font-size: 00.875rem;
+
+                                            .time {
+                                                i {
+                                                    padding-right: 0.375rem;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

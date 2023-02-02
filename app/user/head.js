@@ -1,7 +1,7 @@
 export default function Head() {
     return (
         <>
-            <title>User Profile</title>
+            <title>Home Page</title>
         </>
     );
 }

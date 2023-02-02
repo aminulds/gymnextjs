@@ -1,0 +1,82 @@
+.top-place {
+    background-color: var(--secondary_color);
+
+    .container {
+        .carousel {
+            padding-bottom: 3rem;
+
+            .carousel-indicators {
+                margin-left: 0;
+                margin-right: 0;
+                margin-bottom: 0;
+
+                [data-bs-target] {
+                    background-color: var(--primary_color);
+                    height: 1rem;
+                    width: 1rem;
+                    border-radius: 50%;
+
+                    &:focus-visible {
+                        outline: none;
+                    }
+                }
+            }
+
+            .carousel-inner {
+                .carousel-item {
+                    .row {
+                        .col {
+                            .place-item {
+                                height: 100%;
+
+                                .card {
+                                    height: 100%;
+
+                                    .card-body {
+                                        padding: 1.5rem 1rem;
+
+                                        span {
+                                            font-size: 1.25rem;
+                                        }
+
+                                        .address {
+                                            padding-bottom: 1rem;
+
+                                            i {
+                                                padding-right: 0.375rem;
+                                            }
+
+                                            .card-title {
+                                                font-size: 0.875rem;
+                                                margin-bottom: 0;
+                                            }
+
+                                            i,
+                                            .card-title {
+                                                color: var(--dark_secondary_color);
+                                            }
+                                        }
+
+                                        a {
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+
+                                            i {
+                                                padding-left: 0.625rem;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                // End Carousel Item
+            }
+            // End Carousel Inner
+        }
+        // End Carousel
+    }
+    // End Container
+}

@@ -1,5 +1,5 @@
-import imgAuthBanner from '/public/images/auth/signUpBanner.png';
-import imgLogo from '/public/images/logo/logo.png';
+import imgAuthBanner from '/public/assets/images/auth/signUpBanner.png';
+import imgLogo from '/public/assets/images/logo/logo.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import Input from '../../../components/Input/Input';

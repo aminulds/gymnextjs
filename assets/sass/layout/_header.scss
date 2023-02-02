@@ -1,0 +1,54 @@
+header {
+    .navbar {
+        box-shadow: 0 8px 6px -6px var(--border_color);
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 999;
+        padding: 0;
+        background-color: var(--white_color);
+
+        .container {
+            .navbar-brand {
+                &:focus-visible{
+                    outline: none;
+                }
+                
+                img {
+                    max-height: 3rem;                    
+                }
+            }
+
+            .navbar-toggler {
+                color: var(--primary_color);
+                background-color: transparent;
+                border: none;
+
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+
+            .collapse {
+                .navbar-nav {
+                    .nav-item {
+                        .nav-link {
+                            color: var(--dark_color);
+
+                            &:hover {
+                                color: var(--primary_color);
+                            }
+
+                            &.active {
+                                color: var(--primary_color);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // End Container
+    }
+    // End Nav
+}

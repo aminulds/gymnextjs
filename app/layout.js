@@ -1,51 +1,28 @@
 'use client';
-import { useEffect, useState } from 'react';
-import { MdSpaceDashboard } from 'react-icons/md';
+import { useEffect } from 'react';
 
 // Bootstrap css
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Sidebar from '../components/Sidebar/Sidebar';
+// Bootstrap js
+import bootstrapJS from 'bootstrap/dist/js/bootstrap.bundle';
 // Custom scss
 import '/styles/globals.scss';
-import TopBar from '../components/TopBar/TopBar';
-import { usePathname } from 'next/navigation';
-import Footer from '../components/Footer/Footer';
+import Script from 'next/script';
 
 export default function RootLayout({ children }) {
-    const router = usePathname();
-    const [pageIcon, setPageIcon] = useState(<MdSpaceDashboard />);
-
-    const PageLabelHandler = (icon) => {
-        setPageIcon(icon);
-    };
-
     return (
         <html>
             <head>
                 <meta content="width=device-width, initial-scale=1" name="viewport" />
                 <link rel="icon" href="/images/logo/favicon.png" />
+                <title>Dgym | Home</title>
             </head>
 
-            <body>
-                <div className="container-fluid px-md-4">
-                    {/* Top Bar */}
-                    <TopBar labelTitle={`${router === '/' ? 'Home' : router.replaceAll('/', ' > ')}`} />
-
-                    <div className="row pt-4">
-                        {/* Sidebar */}
-                        <Sidebar PageLabelHandler={PageLabelHandler} />
-                        {/* Main Content */}
-                        {children}
-                    </div>
-                </div>
-
-                {/* Footer */}
-                <Footer />
+            <body data-bs-spy="scroll" data-bs-target="#scrollSpy" data-bs-offset="10" tabindex="0">
+                {children}
 
                 {/* Bootstrap JS */}
-                {useEffect(() => {
-                    import('bootstrap/dist/js/bootstrap');
-                }, [])}
+                <Script src={bootstrapJS} />
             </body>
         </html>
     );

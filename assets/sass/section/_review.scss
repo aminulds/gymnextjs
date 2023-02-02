@@ -1,0 +1,58 @@
+.review {
+    background-color: var(--secondary_color);
+
+    .container{
+        .card {
+            .profile {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-top: 1rem;
+    
+                img {
+                    border: 0.25rem solid var(--secondary_color);
+                }
+            }
+    
+            .card-body {
+                text-align: center;
+    
+                .reviewer {
+                    padding-bottom: 1.25rem;
+    
+                    .name {
+                        margin-bottom: 0.5rem;
+                        font-weight: 600;
+                        font-size: 1rem;
+                    }
+    
+                    .designation {
+                        color: var(--dark_secondary_color);
+                        font-size: 1rem;
+                    }
+                }
+    
+                .review-text {
+                    margin-bottom: 0;
+                    color: var(--dark_secondary_color);
+                    font-size: 0.875rem;
+                }
+    
+                .time-star {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding-bottom: 1.25rem;
+    
+                    .star {
+                        font-size: 0.875rem;
+    
+                        i {
+                            color: var(--warning_color);
+                        }
+                    }
+                }
+            }
+        }
+    }  
+}

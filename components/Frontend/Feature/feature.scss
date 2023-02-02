@@ -1,0 +1,67 @@
+.feature {
+    .container {
+        .row {
+            .feature-item {
+                height: 100%;
+
+                .card {
+                    background-color: $colorSecondary;
+                    border-radius: $radius_2;
+                    height: 100%;
+
+                    .card-body {
+                        padding: 1rem;
+
+                        .icon-wrap {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            padding-bottom: 1rem;
+
+                            .feature-icon {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                border: 0.25rem solid $colorPrimary;
+                                height: 5rem;
+                                width: 5rem;
+                                border-radius: 50%;
+                                transition: $transition_1;
+
+                                svg {
+                                    transition: $transition_1;
+                                    font-size: 2.5rem;
+                                    color: $colorWhite;
+                                }
+                            }
+                        }
+
+                        h6 {
+                            text-align: center;
+                            margin-bottom: 0;
+                            padding-bottom: 1rem;
+                            font-weight: 700;
+                            font-size: 1rem;
+                            color: $colorBlack;
+                        }
+
+                        .card-text {
+                            text-align: center;
+                            font-size: 0.875rem;
+                        }
+                    }
+
+                    &:hover {
+                        .feature-icon {
+                            background-color: $colorPrimary;
+
+                            svg {
+                                transform: scale(1.1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

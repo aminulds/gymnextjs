@@ -1,59 +1,115 @@
-'use client';
-import React from 'react';
-import Comments from '../../components/Comments/Comments';
-import UserProfile from '../../components/UserProfile/UserProfile';
-import { commentsDetailsData } from './commentsData';
-import { IoMdNutrition } from 'react-icons/io';
-import { FaUserAlt } from 'react-icons/fa';
+import Link from 'next/link';
+import Card from '../../components/Card/Card';
+import { uploadData } from './data';
+import { MdArrowForward } from 'react-icons/md';
 
-const Peds = () => {
+const Home = () => {
+    const latestUpload = uploadData.filter((latesItems) => {
+        return latesItems.type === 'latestUpload';
+    });
+
     return (
         <div className="col-12 col-lg-10">
-            <div className="mainContent userPage">
-                <div className="row g-4">
-                    <div className="col-12 col-md-4">
-                        <UserProfile />
+            <div className="mainContent">
+                <div className="row mb-5">
+                    <div className="col-lg-4 mb-5 mb-lg-0">
+                        <div className="sectionTitle">
+                            <h4 className="title">Latest Uploads</h4>
+                        </div>
+                        {latestUpload.map((item) => (
+                            <>
+                                {item.items.map((item) => (
+                                    <Card key={item.id} img={item.image} title={item.title} description={item.description} categoryIcon={item.categoryIcon} />
+                                ))}
+                            </>
+                        ))}
                     </div>
 
-                    <div className="col-12 col-md-8">
-                        <div className="profileComments">
-                            {commentsDetailsData.map((item) => (
-                                <div key={item.id} className="mb-4">
-                                    <div className="commentTitle flex-column">
-                                        <h5>Post Title here</h5>
-                                        <div className="d-flex align-items-center justify-content-between">
-                                            <div className="me-5">
-                                                <span className="me-2">
-                                                    <FaUserAlt />
-                                                </span>{' '}
-                                                <span className="fst-italic">username</span>
-                                            </div>
-                                            <div>
-                                                <span className="me-2">
-                                                    <IoMdNutrition />
-                                                </span>
-                                                Nutrition
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <Comments img={item.img} usrName={item.usrName} time={item.time} love={item.love} text={item.text} replyCount={item.reply.length} />
-                                    {item.reply && (
-                                        <div className="mt-3 ms-4 ms-md-5">
-                                            {item.reply.map((replyItem) => (
-                                                <div key={replyItem.id} className="mt-2">
-                                                    <Comments img={replyItem.img} usrName={replyItem.usrName} time={replyItem.time} love={replyItem.love} text={replyItem.text} />
+                    <div className="col-lg-8">
+                        <div className="sectionTitle">
+                            <h4 className="title">Upcoming Events</h4>
+                            <Link className="link" href="/events">
+                                All Events
+                                <span className="icon">
+                                    <MdArrowForward />
+                                </span>
+                            </Link>
+                        </div>
+
+                        <div className="row g-4 row-cols-1 row-cols-md-2">
+                            {uploadData.map((item) => (
+                                <>
+                                    {item.type === 'event' && (
+                                        <>
+                                            {item.items.slice(0, 2).map((item) => (
+                                                <div className="col" key={item.id}>
+                                                    <Card img={item.image} url="/events/details" title={item.title} description={item.description} categoryIcon={item.categoryIcon} event={true} />
                                                 </div>
                                             ))}
-                                        </div>
+                                        </>
                                     )}
-                                </div>
+                                </>
                             ))}
                         </div>
                     </div>
+                </div>
+
+                {/* lASTEST Videos */}
+                <div className="sectionTitle">
+                    <h4 className="title">Latest Videos</h4>
+                    <Link className="link" href="/videos">
+                        All Videos
+                        <span className="icon">
+                            <MdArrowForward />
+                        </span>
+                    </Link>
+                </div>
+
+                <div className="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 mb-5">
+                    {uploadData.map((item) => (
+                        <>
+                            {item.type === 'video' && (
+                                <>
+                                    {item.items.slice(0, 8).map((item) => (
+                                        <div className="col" key={item.id}>
+                                            <Card img={item.image} title={item.title} url="videos/details" description={item.description} categoryIcon={item.categoryIcon} />
+                                        </div>
+                                    ))}
+                                </>
+                            )}
+                        </>
+                    ))}
+                </div>
+
+                {/* POPULAR Discussions */}
+                <div className="sectionTitle">
+                    <h4 className="title">Popular Discussions</h4>
+                    <Link className="link" href="/discussions">
+                        All Discussions
+                        <span className="icon">
+                            <MdArrowForward />
+                        </span>
+                    </Link>
+                </div>
+
+                <div className="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 mb-5">
+                    {uploadData.map((item) => (
+                        <>
+                            {item.type === 'discussions' && (
+                                <>
+                                    {item.items.slice(0, 8).map((item) => (
+                                        <div className="col" key={item.id}>
+                                            <Card img={item.image} title={item.title} url="discussions/details" description={item.description} categoryIcon={item.categoryIcon} />
+                                        </div>
+                                    ))}
+                                </>
+                            )}
+                        </>
+                    ))}
                 </div>
             </div>
         </div>
     );
 };
 
-export default Peds;
+export default Home;

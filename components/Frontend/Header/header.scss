@@ -1,0 +1,53 @@
+header {
+    box-shadow: $shadow_1;
+    // position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 0.5rem 0;
+    background-color: $colorWhite;
+
+    .navbar {
+        .container {
+            .navbar-brand {
+                &:focus-visible {
+                    outline: none;
+                }
+
+                img {
+                    max-height: 3rem;
+                }
+            }
+
+            .navbar-toggler {
+                color: $colorPrimary;
+                background-color: transparent;
+                border: none;
+
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+
+            .collapse {
+                .navbar-nav {
+                    .nav-item {
+                        .nav-link {
+                            color: $colorBlack;
+                            font-size: 1rem;
+
+                            &:hover {
+                                color: $colorPrimary;
+                            }
+
+                            &.active {
+                                color: $colorPrimary;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

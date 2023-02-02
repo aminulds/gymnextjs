@@ -1,0 +1,76 @@
+.feature{
+    .container{
+        .row{
+            .feature-item{
+                height: 100%;
+                
+                .card{
+                    background-color: var(--secondary_color);
+                    border: 1px solid var(--border_color);
+                    border-radius: 0.375rem;
+                    height: 100%;
+
+                    .card-body{
+                        padding: 1.5rem;
+
+                        .icon-wrap{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            padding-bottom: 1rem;
+
+                            .feature-icon{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                border: 0.25rem solid var(--white_color);
+                                height: 5rem;
+                                width: 5rem;
+                                border-radius: 50%;
+                                transition: all 0.8s;
+                                
+                                i{
+                                    transition: all 0.4s;
+                                    font-size: 2.5rem;
+                                    color: var(--primary_color);
+                                }
+                            }
+                        }
+                        
+
+                        .card-title{
+                            text-align: center;
+                            margin-bottom: 0;
+                            padding-bottom: 1rem;
+                            font-weight: 600;
+                            font-size: 1rem;
+                            color: var(--dark_color);
+                        }
+
+                        .card-text{
+                            text-align: center;
+                            color: var(--dark_secondary_color);
+                            font-size: 0.875rem;
+                        }
+                    }
+
+                    &:hover{
+                        .feature-icon{
+                            background-color: var(--primary_color);
+                            border: 0.25rem solid var(--primary_color) !important;
+
+                            i{  
+                                color: var(--secondary_color) !important;
+                                transform: scale(1.1);
+                            }
+                        }
+                    }
+                }
+                // End Card
+            }
+            // End Feature Item
+        }
+        // End Row
+    }
+    // End Container
+}

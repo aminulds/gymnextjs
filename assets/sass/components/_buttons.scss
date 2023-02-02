@@ -1,0 +1,30 @@
+.primary-btn {
+    background-color: var(--primary_color);
+    border: 1px solid var(--primary_color);
+    color: var(--white_color);
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.4s;
+    font-weight: 600;
+    border-radius: 0.25rem;
+
+    i{
+        transition: all 0.4s;
+    }
+
+    &:hover {
+        background-color: var(--primary_color);
+        border: 1px solid var(--primary_color);
+        color: var(--white_color);
+
+        i {
+            transform: rotate(-45deg);
+        }
+    }
+
+    &:focus {
+        background-color: var(--primary_color);
+        border: 1px solid var(--primary_color);
+        color: var(--white_color);
+    }
+}

@@ -1,0 +1,32 @@
+.banner {
+    background: $colorPrimaryGradient2;
+
+    .container {
+        .row {
+            .bannerLeft {
+                .border-bottom {
+                    border-bottom: 0.125rem solid $colorPrimary !important;
+                    h4 {
+                        color: $colorWhite;
+                        font-weight: 600;
+                    }
+                    h1 {
+                        font-weight: 700;
+                        font-family: $fontBebasNeue;
+                    }
+                }
+
+                .description {
+                    margin-bottom: 0;
+                    margin-top: 1rem;
+                }
+            }
+
+            .bannerRight {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}

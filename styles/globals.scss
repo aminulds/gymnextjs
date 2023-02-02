@@ -22,6 +22,11 @@ html {
         }
 
         // ----------- Components ------------ //
+        // Frontend
+        @import '../components/Frontend/Header/header.scss';
+        @import '../components/Frontend/Banner/banner.scss';
+        @import '../components/Frontend/Feature/feature.scss';
+        @import '../components/Frontend/Package/package.scss';
         // Input
         @import '../components/Input/input.scss';
         @import '../components/Input/button.scss';
@@ -44,8 +49,8 @@ html {
         // Auth
         @import '../app/auth/auth.scss';
         //mainContent
-        @import '../app/mainContent.scss';
+        @import '../app/user/mainContent.scss';
         // Discussion Details
-        @import '../app/discussions/details/discussionDetails.scss';
+        @import '../app//user/discussions/details/discussionDetails.scss';
     }
 }
