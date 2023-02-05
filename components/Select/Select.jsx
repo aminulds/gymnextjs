@@ -2,7 +2,7 @@ import React from 'react';
 
 const Select = () => {
     return (
-        <select class="form-select form-select-lg">
+        <select className="form-select form-select-lg">
             <option selected>New Posts</option>
             <option value="1">Most View</option>
             <option value="2">Most Chat</option>

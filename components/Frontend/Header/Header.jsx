@@ -44,7 +44,7 @@ const Header = () => {
                                 </Link>
                             </li>
                             <li className="nav-item ms-3">
-                                <Link className="nav-link btnPrimary d-flex align-items-center justify-content-center text-white px-3" href="#">
+                                <Link className="nav-link btnPrimary d-flex align-items-center justify-content-center text-white px-3" href="auth/signin">
                                     Log In
                                 </Link>
                             </li>

@@ -3,28 +3,47 @@
 
     .container {
         .carousel {
+            padding-bottom: 3rem;
+
+            .carousel-indicators {
+                margin-left: 0;
+                margin-right: 0;
+                margin-bottom: 0;
+
+                [data-bs-target] {
+                    background-color: $colorPrimary;
+                    height: 1rem;
+                    width: 1rem;
+                    border-radius: 50%;
+
+                    &:focus-visible {
+                        outline: none;
+                    }
+                }
+            }
             .carousel-inner {
                 .carousel-item {
                     .row {
-                        .col {
-                            .place-item {
-                                height: 100%;
-                                .card {
-                                    height: 100%;
-                                    .card-body {
-                                        padding: 1.5rem 1rem;
-                                        .price-time {
-                                            display: flex;
-                                            align-items: center;
-                                            justify-content: space-between;
-                                            padding-bottom: 1rem;
-                                            color: var(--dark_secondary_color);
-                                            font-size: 00.875rem;
+                        .package-item {
+                            height: 100%;
 
-                                            .time {
-                                                i {
-                                                    padding-right: 0.375rem;
-                                                }
+                            .card {
+                                height: 100%;
+
+                                .card-body {
+                                    padding: 1.5rem 1rem;
+
+                                    .price-time {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        padding-bottom: 1rem;
+                                        color: var(--dark_secondary_color);
+                                        font-size: 00.875rem;
+
+                                        .time {
+                                            i {
+                                                padding-right: 0.375rem;
                                             }
                                         }
                                     }

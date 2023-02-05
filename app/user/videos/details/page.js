@@ -35,7 +35,7 @@ const Details = () => {
             {/* Comment Box */}
             <div className="detailSection mt-4">
                 <h5 className="title">Leave a Comments</h5>
-                <div class="form-floating">
+                <div className="form-floating">
                     <textarea className="form-control commentsBox" placeholder="Leave a comment here" id="floatingTextarea2" rows="8"></textarea>
                     <label htmlFor="floatingTextarea2">Start typing...</label>
                     <Button className="btnSend" type="button" id="commentSend" text="Send" icon={<MdSend />} />
