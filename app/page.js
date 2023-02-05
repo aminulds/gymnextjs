@@ -1,6 +1,8 @@
 import React from 'react';
 import Banner from '../components/Frontend/Banner/Banner';
+import Contact from '../components/Frontend/Contact/Contact';
 import Feature from '../components/Frontend/Feature/Feature';
+import Footer from '../components/Frontend/Footer/Footer';
 import Gallery from '../components/Frontend/Gallery/Gallery';
 import Header from '../components/Frontend/Header/Header';
 import Package from '../components/Frontend/Package/Package';
@@ -26,6 +28,12 @@ const Home = () => {
 
             {/* Review */}
             <Review />
+
+            {/* Contact */}
+            <Contact />
+
+            {/* Footer */}
+            <Footer />
         </div>
     );
 };

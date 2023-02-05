@@ -19,32 +19,18 @@ const Header = () => {
                     <div className="collapse navbar-collapse d-lg-flex align-items-center justify-content-end" id="navbarNav">
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <Link className="nav-link" href="#feature">
-                                    Feature
+                                <Link className="nav-link" href="#">
+                                    About US
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" href="#package">
-                                    Package
+                                <Link className="nav-link" href="#">
+                                    Privacy
                                 </Link>
                             </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" href="#gallery">
-                                    Gallery
-                                </Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" href="#review">
-                                    Review
-                                </Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" href="#contact">
-                                    Contact
-                                </Link>
-                            </li>
+
                             <li className="nav-item ms-3">
-                                <Link className="nav-link btnPrimary d-flex align-items-center justify-content-center text-white px-3" href="auth/signin">
+                                <Link className="nav-link btnPrimary d-flex align-items-center justify-content-center text-white px-3 py-1" href="auth/signin">
                                     Log In
                                 </Link>
                             </li>

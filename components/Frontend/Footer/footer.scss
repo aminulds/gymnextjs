@@ -1,0 +1,196 @@
+.footer {
+    position: relative;
+    background: url('https://images.pexels.com/photos/4716816/pexels-photo-4716816.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    padding: 4rem 0 2rem 0;
+    color: $colorWhite;
+
+    &::after {
+        position: absolute;
+        background-color: $colorBgOpacity;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+        z-index: -1;
+    }
+
+    p {
+        font-size: 0.875rem;
+        color: var(--white_color);
+    }
+
+    .footer-top {
+        border-bottom: $border_1;
+        margin-bottom: 1rem;
+
+        .footer-widget {
+            margin-bottom: 2rem;
+
+            .foot-logo {
+                margin-bottom: 1.5rem;
+
+                &:focus-visible {
+                    outline: none;
+                }
+            }
+
+            .cont-info {
+                p {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 1rem;
+
+                    svg {
+                        float: left;
+                        margin-right: 1.25rem;
+                        font-size: 1rem;
+                        color: $colorWhite;
+                    }
+
+                    a {
+                        font-size: 0.875rem;
+                        display: block;
+                        overflow: hidden;
+                        color: $colorPrimary;
+                        text-decoration: none;
+                        transition: $transition_1;
+
+                        &:hover {
+                            color: $colorWhite;
+                        }
+                    }
+                }
+            }
+
+            .footer-title {
+                margin-bottom: 1rem;
+                font-size: 1.25rem;
+                color: $colorWhite;
+                font-weight: 600;
+            }
+
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+
+                li {
+                    line-height: 2rem;
+
+                    a {
+                        font-weight: 400;
+                        font-size: 0.875rem;
+                    }
+                }
+            }
+
+            .support-list {
+                li {
+                    line-height: 2rem;
+                }
+            }
+
+            .subscribe-form {
+                margin-top: 1rem;
+
+                .form-group {
+                    .form-control {
+                        height: 2.5rem;
+                        border-radius: $radius_1;
+                        padding: 1.5rem 2rem;
+                        border: none;
+                    }
+                }
+
+                .d-grid {
+                    margin-top: 1rem;
+
+                    button {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        svg {
+                            margin-left: 0.325rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // End Footer Top
+
+    .footer-bottom {
+        .copyright-text {
+            margin-bottom: 0;
+
+            a {
+                color: $colorPrimary;
+
+                &:hover {
+                    color: $colorWhite;
+                }
+            }
+        }
+
+        .footer-social-link {
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 0;
+            margin-bottom: 0;
+
+            li {
+                line-height: 2rem;
+                display: inline-block;
+                margin: 0 0.5rem;
+
+                a {
+                    transition: all 0.4s ease;
+                    font-size: 1.25rem;
+                    color: $colorPrimary;
+                }
+
+                .facebook {
+                    color: #185de8e3;
+                    &:hover {
+                        color: $colorPrimary;
+                    }
+                }
+
+                .twitter {
+                    color: #1da1f2c7;
+                    &:hover {
+                        color: $colorPrimary;
+                    }
+                }
+
+                .pinterest {
+                    color: #e600238c;
+                    &:hover {
+                        color: $colorPrimary;
+                    }
+                }
+
+                .linkedin {
+                    color: #0072b1;
+                    &:hover {
+                        color: $colorPrimary;
+                    }
+                }
+
+                .youtube {
+                    color: #ff0000a8;
+                    &:hover {
+                        color: $colorPrimary;
+                    }
+                }
+            }
+        }
+    }
+}

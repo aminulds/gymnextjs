@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // Bootstrap js
 import bootstrapJS from 'bootstrap/dist/js/bootstrap.bundle';
+
 // Custom scss
 import '/styles/globals.scss';
 import Script from 'next/script';

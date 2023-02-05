@@ -6,7 +6,7 @@ import { CgGym } from 'react-icons/cg';
 
 const Banner = () => {
     return (
-        <div className="banner mt-4 mt-md-5" id="banner">
+        <div className="banner py-4 py-md-5" id="banner">
             <div className="container">
                 <div className="row row-cols-1 row-cols-md-2 g-4 flex-row-reverse">
                     <div className="col d-flex align-items-center justify-content-center">
