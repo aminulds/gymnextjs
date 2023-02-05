@@ -1,0 +1,19 @@
+.gallery {
+    .container {
+        .row {
+            .gallery-item {
+                .card {
+                    background-color: $colorSecondary;
+
+                    .card-body {
+                        .card-title {
+                            margin-bottom: 0;
+                            padding-left: 0.375rem;
+                            font-size: 0.875rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

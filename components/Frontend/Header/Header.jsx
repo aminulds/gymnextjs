@@ -6,7 +6,7 @@ import { MdMenuOpen } from 'react-icons/md';
 
 const Header = () => {
     return (
-        <header id="scrollSpy" classNameName="header">
+        <header classNameName="header">
             <nav className="navbar navbar-expand-lg">
                 <div className="container d-flex align-items-center justify-content-between">
                     <a className="navbar-brand" href="/">
