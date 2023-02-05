@@ -4,6 +4,7 @@ import Feature from '../components/Frontend/Feature/Feature';
 import Gallery from '../components/Frontend/Gallery/Gallery';
 import Header from '../components/Frontend/Header/Header';
 import Package from '../components/Frontend/Package/Package';
+import Review from '../components/Frontend/Review/Review';
 
 const Home = () => {
     return (
@@ -22,6 +23,9 @@ const Home = () => {
 
             {/* Gallery */}
             <Gallery />
+
+            {/* Review */}
+            <Review />
         </div>
     );
 };

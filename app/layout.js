@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
                 <title>Dgym | Home</title>
             </head>
 
-            <body data-bs-spy="scroll" data-bs-target="#scrollSpy" data-bs-offset="10" tabindex="0">
+            <body>
                 {children}
 
                 {/* Bootstrap JS */}
