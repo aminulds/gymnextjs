@@ -7,12 +7,12 @@ export const sideBarNavData = [
         navItems: [
             {
                 title: 'Home',
-                path: '/',
+                path: '/users',
                 icon: <MdSpaceDashboard />,
             },
             {
                 title: 'Discussions',
-                path: '/discussions',
+                path: 'users/discussions',
                 icon: <MdForum />,
             },
         ],
@@ -23,17 +23,17 @@ export const sideBarNavData = [
         navItems: [
             {
                 title: 'Peds',
-                path: '/peds',
+                path: 'users/peds',
                 icon: <MdWaterDrop />,
             },
             {
                 title: 'Nutrition',
-                path: '/nutrition',
+                path: 'users/nutrition',
                 icon: <IoMdNutrition />,
             },
             {
                 title: 'Training',
-                path: '/training',
+                path: 'users/training',
                 icon: <MdFitnessCenter />,
             },
 
@@ -45,17 +45,17 @@ export const sideBarNavData = [
                 subNavItems: [
                     {
                         title: 'Peds',
-                        path: '/peds',
+                        path: 'users/peds',
                         icon: <MdWaterDrop />,
                     },
                     {
                         title: 'Nutrition',
-                        path: '/nutrition',
+                        path: 'users/nutrition',
                         icon: <IoMdNutrition />,
                     },
                     {
                         title: 'Training',
-                        path: '/training',
+                        path: 'users/training',
                         icon: <MdFitnessCenter />,
                     },
                 ],

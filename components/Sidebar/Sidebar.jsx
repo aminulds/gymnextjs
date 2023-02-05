@@ -6,7 +6,7 @@ import { FiLogOut } from 'react-icons/fi';
 import { FaUser } from 'react-icons/fa';
 import Input from '../Input/Input';
 import { sideBarNavData } from './sidebarData';
-import userImage from '/public/images/users/user-profile.png';
+import userImage from '/public/assets/images/users/user-profile.png';
 
 const Sidebar = ({ PageLabelHandler }) => {
     const [login, setLogin] = useState(true);
@@ -67,13 +67,13 @@ const Sidebar = ({ PageLabelHandler }) => {
                             {/* User Profile */}
                             {login && (
                                 <div className="user my-3 pe-3">
-                                    <Link href="auth/signin" onClick={() => setLogin(false)} className="nav-link mb-3 text-danger">
+                                    <Link href="/" onClick={() => setLogin(false)} className="nav-link mb-3 text-danger">
                                         <span className="mx-2">
                                             <FiLogOut />
                                         </span>
                                         Logout
                                     </Link>
-                                    <Link onClick={() => ActiveNavHandler('', userIcon, '/user')} href="/user" className="nav-link d-flex align-items-center">
+                                    <Link href="/users/user" className="nav-link d-flex align-items-center">
                                         <Image className="userImage img-fluid me-2" src={userImage} alt="User Profile" />
                                         <span className="text-nowrap">Jeslin Smith</span>
                                     </Link>

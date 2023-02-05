@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
-import usrCover from '/public/images/users/cover.png';
-import userProfile from '/public/images/users/user-profile.png';
+import usrCover from '/public/assets/images/users/cover.png';
+import userProfile from '/public/assets/images/users/user-profile.png';
 import { MdLabelImportant, MdBadge, MdOutlinePermContactCalendar, MdMail, MdPriceCheck, MdRestartAlt } from 'react-icons/md';
 import { FaUserEdit } from 'react-icons/fa';
 

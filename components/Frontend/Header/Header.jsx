@@ -19,6 +19,11 @@ const Header = () => {
                     <div className="collapse navbar-collapse d-lg-flex align-items-center justify-content-end" id="navbarNav">
                         <ul className="navbar-nav">
                             <li className="nav-item">
+                                <Link className="nav-link" href="/users">
+                                    Demo User View
+                                </Link>
+                            </li>
+                            <li className="nav-item">
                                 <Link className="nav-link" href="#">
                                     About US
                                 </Link>
