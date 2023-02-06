@@ -1,6 +1,4 @@
 'use client';
-import { useEffect } from 'react';
-
 // Bootstrap css
 import 'bootstrap/dist/css/bootstrap.min.css';
 // Bootstrap js
@@ -15,7 +13,7 @@ export default function RootLayout({ children }) {
         <html>
             <head>
                 <meta content="width=device-width, initial-scale=1" name="viewport" />
-                <link rel="icon" type="image/x-icon" href="/public/assets/images/logo/favicon.png" />
+                <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/logo/favicon.png" />
                 <title>Dgym | Home</title>
             </head>
 
