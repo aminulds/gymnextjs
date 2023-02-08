@@ -1,12 +1,10 @@
 'use client';
+import { useEffect } from 'react';
 // Bootstrap css
 import 'bootstrap/dist/css/bootstrap.min.css';
-// Bootstrap js
-import bootstrapJS from 'bootstrap/dist/js/bootstrap.bundle';
 
 // Custom scss
 import '/styles/globals.scss';
-import Script from 'next/script';
 
 export default function RootLayout({ children }) {
     return (
@@ -21,7 +19,9 @@ export default function RootLayout({ children }) {
                 {children}
 
                 {/* Bootstrap JS */}
-                <Script src={bootstrapJS} />
+                {useEffect(() => {
+                    require('bootstrap/dist/js/bootstrap.bundle.min.js');
+                }, [])}
             </body>
         </html>
     );

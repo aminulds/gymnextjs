@@ -1,3 +1,4 @@
+'use client';
 import { MdSend } from 'react-icons/md';
 import React from 'react';
 import Button from '../../../../components/Input/Button';

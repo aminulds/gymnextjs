@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { uploadData } from '../../data';
 import { MdArrowRightAlt } from 'react-icons/md';

@@ -1,5 +1,5 @@
+'use client';
 import Link from 'next/link';
-
 import { uploadData } from './data';
 import { MdArrowForward } from 'react-icons/md';
 import Card from '../../components/Card/Card';

@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import Banner from '../components/Frontend/Banner/Banner';
 import Contact from '../components/Frontend/Contact/Contact';
